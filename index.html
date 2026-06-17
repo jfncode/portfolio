@@ -41,7 +41,7 @@
     --header-bg:rgba(255,255,255,.85); --veil:rgba(246,248,251,.78);
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;overflow-x:hidden}
   body{background-color:var(--bg);
     background-image:linear-gradient(var(--veil),var(--veil)),url('assets/bg-neural-dark.jpg');
     background-size:auto,480px;background-repeat:repeat;background-position:center top;
@@ -70,7 +70,7 @@
   @media(max-width:760px){.nav-links{display:none}}
 
   /* hero */
-  .hero{position:relative;padding:110px 0 90px;text-align:left}
+  .hero{position:relative;padding:110px 0 90px;text-align:left;overflow:hidden}
   .hero::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:780px;height:480px;
     background:radial-gradient(ellipse at center,rgba(34,211,165,.13),transparent 70%);pointer-events:none}
   .tag{font-family:var(--mono);font-size:.82rem;color:var(--accent);letter-spacing:.5px;margin-bottom:20px;display:inline-block}
@@ -192,7 +192,11 @@
   .jfc-inp{border-top:1px solid #1e2a3a;padding:10px 13px;display:flex;align-items:center;gap:7px;flex:0 0 auto}
   .jfc-inp input{flex:1;background:none;border:none;outline:none;color:#e6edf3;font-family:var(--mono);font-size:13px}
   .jfc-inp input::placeholder{color:#4a5568}
-  @media(max-width:480px){.jfc-fab .jfc-ftxt{display:none} .jfc-win{height:72vh}}
+  @media(max-width:480px){
+    .jfc-fab .jfc-ftxt{display:none}
+    .jfc-fab{right:16px;bottom:16px}
+    .jfc-win{right:10px;left:10px;bottom:10px;width:auto;max-width:none;height:78vh;max-height:78vh}
+  }
 </style>
 </head>
 <body>
