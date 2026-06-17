@@ -151,6 +151,44 @@
 
   footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--muted);font-size:.86rem}
   footer .mono{color:var(--accent)}
+
+  /* ===== jfncode chatbot (terminal, sempre dark) ===== */
+  .jfc-fab{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;align-items:center;gap:11px;
+    background:#0b1019;border:1px solid #22384a;border-radius:12px;padding:10px 15px;cursor:pointer;
+    font-family:var(--mono);box-shadow:0 12px 30px rgba(0,0,0,.45);transition:.2s}
+  .jfc-fab:hover{border-color:#22d3a5;transform:translateY(-2px)}
+  .jfc-fab.hidden{display:none}
+  .jfc-seal{width:30px;height:30px;border-radius:8px;background:linear-gradient(145deg,#0e1524,#0a0e14);
+    border:1px solid #22384a;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex:0 0 30px}
+  .jfc-ftxt{text-align:left;line-height:1.2}
+  .jfc-ftxt b{color:#e6edf3;font-size:13px;display:block}
+  .jfc-ftxt span{color:#5b6b7d;font-size:11px}
+  .jfc-j{color:#22d3a5;font-weight:800}
+  .jfc-gr{color:#5b6b7d} .jfc-pr{color:#19b8e8}
+  .jfc-win{position:fixed;right:22px;bottom:22px;z-index:91;width:360px;max-width:calc(100vw - 32px);
+    height:500px;max-height:calc(100vh - 44px);background:#0b1019;border:1px solid #1e2a3a;border-radius:14px;
+    overflow:hidden;display:none;flex-direction:column;font-family:var(--mono);box-shadow:0 24px 60px rgba(0,0,0,.55)}
+  .jfc-win.open{display:flex}
+  .jfc-bar{height:38px;background:#0a0f18;border-bottom:1px solid #1e2a3a;display:flex;align-items:center;gap:8px;padding:0 13px;flex:0 0 38px}
+  .jfc-dot{width:11px;height:11px;border-radius:50%}
+  .jfc-title{margin-left:9px;color:#5b6b7d;font-size:12px}
+  .jfc-x{margin-left:auto;background:none;border:none;color:#5b6b7d;font-size:14px;cursor:pointer}
+  .jfc-x:hover{color:#e6edf3}
+  .jfc-log{flex:1;overflow-y:auto;padding:14px 14px 8px;font-size:13px;line-height:1.65;color:#cdd7e1}
+  .jfc-line{margin:8px 0 2px} .jfc-cmd{color:#e6edf3}
+  .jfc-bot{color:#cdd7e1;margin:5px 0 9px} .jfc-bot b{color:#22d3a5}
+  .jfc-chips{display:flex;flex-direction:column;gap:7px;margin:2px 0 11px;align-items:flex-start}
+  .jfc-chip{font-family:var(--mono);color:#7ee2c4;background:rgba(34,211,165,.07);border:1px solid #1e3a32;
+    border-radius:7px;padding:7px 11px;font-size:12.5px;cursor:pointer;text-align:left;transition:.15s}
+  .jfc-chip::before{content:"> ";color:#22d3a5}
+  .jfc-chip:hover{background:rgba(34,211,165,.15);border-color:#22d3a5}
+  .jfc-wa{font-family:var(--mono);color:#0a0e14;background:#22d3a5;border-radius:7px;padding:7px 13px;
+    font-size:12.5px;font-weight:700;text-decoration:none}
+  .jfc-wa:hover{filter:brightness(1.08)}
+  .jfc-inp{border-top:1px solid #1e2a3a;padding:10px 13px;display:flex;align-items:center;gap:7px;flex:0 0 auto}
+  .jfc-inp input{flex:1;background:none;border:none;outline:none;color:#e6edf3;font-family:var(--mono);font-size:13px}
+  .jfc-inp input::placeholder{color:#4a5568}
+  @media(max-width:480px){.jfc-fab .jfc-ftxt{display:none} .jfc-win{height:72vh}}
 </style>
 </head>
 <body>
@@ -374,5 +412,7 @@
     });
   })();
 </script>
+<script src="assets/faq.js"></script>
+<script src="assets/assistant.js"></script>
 </body>
 </html>
