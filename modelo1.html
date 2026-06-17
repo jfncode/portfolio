@@ -84,6 +84,21 @@
   .termbody{padding:16px 18px;color:#7ee2c4;line-height:1.7}
   .termbody .c2{color:var(--accent2)} .termbody .gr{color:var(--muted)}
 
+  /* planos */
+  .grid-plan{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:stretch}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column;transition:.2s;position:relative}
+  .plan:hover{border-color:var(--accent);transform:translateY(-4px)}
+  .plan.feat{border-color:var(--accent);box-shadow:0 18px 50px rgba(34,211,165,.12)}
+  .plan .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:.72rem;background:var(--accent);color:#04140e;padding:5px 14px;border-radius:20px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
+  .plan .pname{font-family:var(--mono);font-size:.82rem;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
+  .plan .price{font-size:2.3rem;font-weight:800;letter-spacing:-1px;line-height:1}
+  .plan .price small{font-size:.95rem;color:var(--muted);font-weight:500}
+  .plan .mo{font-family:var(--mono);font-size:.82rem;color:var(--muted);margin-top:6px}
+  .plan ul{list-style:none;margin:22px 0 26px;display:flex;flex-direction:column;gap:11px;flex:1}
+  .plan li{color:var(--muted);font-size:.92rem;padding-left:24px;position:relative}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+  .plan .btn{justify-content:center;width:100%}
+
   /* about */
   .about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
   .about .txt p{color:var(--muted);margin-bottom:16px}
@@ -107,6 +122,7 @@
   <div class="nav-links">
     <a href="#servicos">Serviços</a>
     <a href="#projetos">Projetos</a>
+    <a href="#planos">Planos</a>
     <a href="#sobre">Sobre</a>
     <a href="#contato">Contato</a>
   </div>
@@ -205,6 +221,62 @@
       <div class="body"><span class="cat">Automação · IA</span><h3>OpenClaw + JhefBot</h3>
       <p>Sistema próprio de automação: bot no Telegram + agendador que gera e publica conteúdo com IA sozinho, sem intervenção.</p>
       <span class="link">projeto interno</span></div>
+    </div>
+
+  </div>
+</div></section>
+
+<section id="planos"><div class="wrap">
+  <div class="sec-head">
+    <span class="tag">investimento</span>
+    <h2>Planos</h2>
+    <p>Escolha o ponto de partida. Tudo responsivo, no ar em poucos dias e com manutenção mensal pra seu site nunca ficar parado.</p>
+  </div>
+  <div class="grid-plan">
+
+    <div class="plan">
+      <div class="pname">Essencial</div>
+      <div class="price">R$ 590</div>
+      <div class="mo">+ R$ 60/mês de manutenção</div>
+      <ul>
+        <li>Site one-page (várias seções)</li>
+        <li>100% responsivo (celular + PC)</li>
+        <li>Botão de WhatsApp integrado</li>
+        <li>Domínio .com.br configurado</li>
+        <li>2 rodadas de ajustes</li>
+        <li>No ar em até 7 dias</li>
+      </ul>
+      <a class="btn btn-ghost" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20Essencial." target="_blank">Quero esse</a>
+    </div>
+
+    <div class="plan feat">
+      <div class="badge">MAIS PEDIDO</div>
+      <div class="pname">Profissional</div>
+      <div class="price">R$ 1.290</div>
+      <div class="mo">+ R$ 90/mês de manutenção</div>
+      <ul>
+        <li>Tudo do Essencial</li>
+        <li>Até 5 seções / páginas</li>
+        <li>Galeria, áreas de atuação, depoimentos</li>
+        <li>Integração Instagram + Google Maps</li>
+        <li>SEO básico (aparecer no Google)</li>
+        <li>3 rodadas de ajustes</li>
+      </ul>
+      <a class="btn btn-primary" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20Profissional." target="_blank">💬 Pedir orçamento</a>
+    </div>
+
+    <div class="plan">
+      <div class="pname">Premium</div>
+      <div class="price">Sob <small>orçamento</small></div>
+      <div class="mo">+ manutenção a combinar</div>
+      <ul>
+        <li>Tudo do Profissional</li>
+        <li>Chatbot, login ou sistema interno</li>
+        <li>Blog ou catálogo dinâmico</li>
+        <li>Painel de gestão sob medida</li>
+        <li>Suporte prioritário</li>
+      </ul>
+      <a class="btn btn-ghost" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20um%20projeto%20Premium." target="_blank">Falar comigo</a>
     </div>
 
   </div>
