@@ -121,7 +121,11 @@
 
   /* portfolio */
   .grid-proj{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:24px}
-  .proj{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s;display:flex;flex-direction:column}
+  .proj{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s;display:flex;flex-direction:column;position:relative}
+  .seal{position:absolute;top:11px;right:11px;z-index:3;font-family:var(--mono);font-size:.64rem;letter-spacing:.4px;text-transform:uppercase;padding:4px 9px;border-radius:20px;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .seal.cli{background:var(--accent);color:#04140e}
+  .seal.own{background:var(--accent2);color:#04140e}
+  .seal.demo{background:rgba(139,152,169,.92);color:#0a0e14}
   .proj:hover{border-color:var(--accent);transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.4)}
   .proj .thumb{aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line);background:var(--bg2)}
   .proj .thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:.4s}
@@ -168,6 +172,15 @@
   .cta p{color:var(--muted);max-width:480px;margin:0 auto 30px}
   .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
+  /* depoimentos */
+  .grid-depo{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .depo{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column}
+  .depo .quote{color:var(--txt);font-size:.96rem;line-height:1.6;margin-bottom:18px;flex:1}
+  .depo .who{display:flex;align-items:center;gap:11px}
+  .depo .av{width:40px;height:40px;border-radius:50%;background:var(--bg2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--mono);color:var(--accent);font-weight:700;flex:0 0 40px}
+  .depo .who b{font-size:.9rem;display:block}
+  .depo .who span{color:var(--muted);font-size:.8rem}
+
   footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--muted);font-size:.86rem}
   footer .mono{color:var(--accent)}
 
@@ -213,6 +226,28 @@
     .jfc-win{right:10px;left:10px;bottom:10px;width:auto;max-width:none;height:78vh;max-height:78vh}
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "jfncode",
+  "description": "Desenvolvimento de sites, sistemas internos, chatbots e automação com IA para o seu negócio.",
+  "url": "https://jfncode.github.io/portfolio/",
+  "image": "https://jfncode.github.io/portfolio/assets/og-card.jpg",
+  "founder": { "@type": "Person", "name": "Jefferson Tavares" },
+  "areaServed": "Brasil",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Florianópolis",
+    "addressRegion": "SC",
+    "addressCountry": "BR"
+  },
+  "telephone": "+5548998006470",
+  "email": "jfntavares91@gmail.com",
+  "priceRange": "R$ 590 - sob orçamento",
+  "sameAs": ["https://github.com/jfncode"]
+}
+</script>
 </head>
 <body>
 <header><div class="wrap"><nav>
@@ -226,7 +261,7 @@
   </div>
   <div class="nav-right">
     <button class="theme-toggle" id="themeToggle" type="button" title="Alternar tema claro/escuro" aria-label="Alternar tema">&gt;<span class="cur">_</span></button>
-    <a class="nav-cta" href="https://wa.me/5548998006470" target="_blank">Falar com a gente</a>
+    <a class="nav-cta" href="https://wa.me/5548998006470" target="_blank">Falar comigo</a>
     <button class="nav-burger" id="navBurger" type="button" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   </div>
 </nav></div></header>
@@ -237,19 +272,19 @@
   <a href="#planos">Planos</a>
   <a href="#sobre">Sobre</a>
   <a href="#contato">Contato</a>
-  <a class="mm-cta" href="https://wa.me/5548998006470" target="_blank">💬 Falar com a gente</a>
+  <a class="mm-cta" href="https://wa.me/5548998006470" target="_blank">💬 Falar comigo</a>
 </div>
 
 <section class="hero"><div class="wrap">
   <span class="tag">dev · ia · automação</span>
-  <h1>Sites, sistemas e <span class="accent">automação com IA</span> para o seu negócio.</h1>
-  <p>Deixamos seu negócio mais visível e profissional para atrair mais clientes — sem você precisar de uma equipe de TI.</p>
+  <h1>Seu site no ar em <span class="accent">7 dias</span> — sem agência, sem enrolação.</h1>
+  <p>Sou o Jefferson, desenvolvedor independente turbinado por IA. Entrego rápido, cobro menos que agência e você fala direto comigo — do site ao sistema com automação.</p>
   <div class="hero-btns">
     <a class="btn btn-primary" href="https://wa.me/5548998006470" target="_blank">💬 Pedir orçamento</a>
     <a class="btn btn-ghost" href="#projetos">Ver projetos</a>
   </div>
   <div class="stats">
-    <div class="stat"><b>7+</b><span>projetos no ar</span></div>
+    <div class="stat"><b>6</b><span>projetos publicados</span></div>
     <div class="stat"><b>100%</b><span>código próprio</span></div>
     <div class="stat"><b>IA</b><span>integrada nas soluções</span></div>
   </div>
@@ -257,16 +292,16 @@
 
 <section id="servicos"><div class="wrap">
   <div class="sec-head">
-    <span class="tag">o que fazemos</span>
+    <span class="tag">o que eu faço</span>
     <h2>Serviços</h2>
     <p>Soluções sob medida — do visual à engrenagem que roda por trás.</p>
   </div>
   <div class="grid-serv">
-    <div class="serv"><div class="ic">🌐</div><h3>Sites & Landing Pages</h3><p>Páginas rápidas, responsivas e feitas pra converter. Institucional, captação ou one-page.</p></div>
-    <div class="serv"><div class="ic">⚙️</div><h3>Sistemas internos</h3><p>Plataformas sob medida: cadastros, treinamento, certificação, painéis de gestão.</p></div>
-    <div class="serv"><div class="ic">🤖</div><h3>Chatbots & IA</h3><p>Assistentes que respondem clientes e dúvidas — inclusive 100% offline, sem custo de API.</p></div>
-    <div class="serv"><div class="ic">🔁</div><h3>Automação</h3><p>Robôs que publicam conteúdo, monitoram e executam tarefas repetitivas sozinhos, 24/7.</p></div>
-    <div class="serv"><div class="ic">🔗</div><h3>SEO & Preview de Link</h3><p>Open Graph configurado: quando seu link é compartilhado no WhatsApp e redes, aparece com imagem, título e descrição — não um link sem graça.</p></div>
+    <div class="serv"><div class="ic" aria-hidden="true">🌐</div><h3>Sites & Landing Pages</h3><p>Páginas rápidas, responsivas e feitas pra converter. Institucional, captação ou one-page.</p></div>
+    <div class="serv"><div class="ic" aria-hidden="true">⚙️</div><h3>Sistemas internos</h3><p>Plataformas sob medida: cadastros, treinamento, certificação, painéis de gestão.</p></div>
+    <div class="serv"><div class="ic" aria-hidden="true">🤖</div><h3>Chatbots & IA</h3><p>Assistentes que respondem clientes e dúvidas — inclusive 100% offline, sem custo de API.</p></div>
+    <div class="serv"><div class="ic" aria-hidden="true">🔁</div><h3>Automação</h3><p>Robôs que publicam conteúdo, monitoram e executam tarefas repetitivas sozinhos, 24/7.</p></div>
+    <div class="serv"><div class="ic" aria-hidden="true">🔗</div><h3>SEO & Preview de Link</h3><p>Open Graph configurado: quando seu link é compartilhado no WhatsApp e redes, aparece com imagem, título e descrição — não um link sem graça.</p></div>
   </div>
 </div></section>
 
@@ -279,6 +314,7 @@
   <div class="grid-proj">
 
     <a class="proj" href="https://cascob.com.br" target="_blank">
+      <span class="seal cli">Cliente</span>
       <div class="thumb"><img src="shots/cascob.jpeg" alt="CASCOB"></div>
       <div class="body"><span class="cat">Site institucional</span><h3>CASCOB</h3>
       <p>Escritório de recuperação de créditos e defesa em busca e apreensão. Design sóbrio, autoridade e captação por WhatsApp.</p>
@@ -286,6 +322,7 @@
     </a>
 
     <a class="proj" href="https://desbloqueiodeapp.com.br" target="_blank">
+      <span class="seal cli">Cliente</span>
       <div class="thumb"><img src="shots/desbloqueiodeapp.jpeg" alt="Desbloqueio de App"></div>
       <div class="body"><span class="cat">Landing de captação</span><h3>Desbloqueio de App</h3>
       <p>Página focada em entregadores bloqueados em apps de entrega/transporte. Copy direta e conversão.</p>
@@ -293,6 +330,7 @@
     </a>
 
     <a class="proj" href="https://jfncode.github.io/landing-nereu-ramos/" target="_blank">
+      <span class="seal demo">Demo</span>
       <div class="thumb"><img src="shots/nereu.jpeg" alt="Hospital Nereu Ramos"></div>
       <div class="body"><span class="cat">Institucional + IA</span><h3>Hospital Nereu Ramos</h3>
       <p>Landing institucional com o chatbot "Nereu Responde" — assistente de IA que responde dúvidas do público, 100% offline.</p>
@@ -300,6 +338,7 @@
     </a>
 
     <a class="proj" href="https://jfncode.github.io/pops-hnr-beta/" target="_blank">
+      <span class="seal demo">Demo</span>
       <div class="thumb"><img src="shots/pops.jpeg" alt="POPs HNR"></div>
       <div class="body"><span class="cat">Plataforma de saúde</span><h3>POPs HNR</h3>
       <p>Sistema interno de treinamento e certificação de equipes de enfermagem: leitura de POPs, provas e painel do gestor.</p>
@@ -307,6 +346,7 @@
     </a>
 
     <a class="proj" href="https://jfncode.github.io/site-gabriely-nunes-advocacia/" target="_blank">
+      <span class="seal cli">Cliente</span>
       <div class="thumb"><img src="shots/gabriely.jpeg" alt="Gabriely Nunes Advocacia"></div>
       <div class="body"><span class="cat">Advocacia</span><h3>Gabriely Nunes Adv.</h3>
       <p>Landing one-page para advocacia de família e sucessões. Identidade elegante e contato direto.</p>
@@ -314,6 +354,7 @@
     </a>
 
     <a class="proj" href="https://descentralize.com.br" target="_blank">
+      <span class="seal own">Próprio</span>
       <div class="thumb"><img src="shots/descentralize.jpeg" alt="Descentralize"></div>
       <div class="body"><span class="cat">Portal de conteúdo</span><h3>Descentralize</h3>
       <p>Blog/portal sobre Bitcoin, DeFi e cripto em português. Projeto próprio de conteúdo e audiência.</p>
@@ -321,6 +362,7 @@
     </a>
 
     <div class="proj nolink">
+      <span class="seal own">Próprio</span>
       <div class="termcard">
         <div class="termbar"><span class="dot" style="background:#ff5f56"></span><span class="dot" style="background:#ffbd2e"></span><span class="dot" style="background:#27c93f"></span><span class="gr" style="margin-left:8px;color:var(--muted)">jhefbot — 24/7</span></div>
         <div class="termbody">
@@ -392,19 +434,22 @@
         <li>Blog ou catálogo dinâmico</li>
         <li>Suporte prioritário</li>
       </ul>
-      <a class="btn btn-ghost" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20um%20projeto%20Premium." target="_blank">Falar com a equipe</a>
+      <a class="btn btn-ghost" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20um%20projeto%20Premium." target="_blank">Falar comigo</a>
     </div>
 
   </div>
+  <p style="color:var(--muted);font-size:.86rem;margin-top:24px;text-align:center;max-width:680px;margin-left:auto;margin-right:auto">
+    💡 A <b style="color:var(--txt)">manutenção mensal</b> mantém seu site no ar e cuidado: hospedagem, domínio, atualizações de segurança, backup e pequenos ajustes de conteúdo/texto sempre que precisar. Você nunca fica com um site parado ou desatualizado.
+  </p>
 </div></section>
 
 <section id="sobre"><div class="wrap">
   <div class="about">
     <div class="txt">
       <span class="tag">sobre</span>
-      <h2 style="font-size:2rem;font-weight:800;margin:10px 0 18px">Quem somos</h2>
-      <p>Somos a <b><span class="mono accent">jfncode</span></b> — um estúdio de tecnologia focado em entregar coisas que ficam <b>no ar e dão resultado</b>: sites, sistemas internos, chatbots e automação com IA.</p>
-      <p>Cuidamos do começo ao fim — design, código e a engrenagem por trás — sem depender de templates engessados. Cada projeto aqui está publicado e funcionando.</p>
+      <h2 style="font-size:2rem;font-weight:800;margin:10px 0 18px">Quem faz</h2>
+      <p>Sou o <b>Jefferson</b>, o desenvolvedor por trás da <b><span class="mono accent">jfncode</span></b>. Trabalho de forma independente, turbinado por IA, pra entregar coisas que ficam <b>no ar e dão resultado</b>: sites, sistemas internos, chatbots e automação.</p>
+      <p>Cuido do começo ao fim — design, código e a engrenagem por trás — sem templates engessados e sem equipe fantasma: você fala direto com quem constrói. Cada projeto aqui está publicado e funcionando.</p>
       <div class="skills">
         <span class="chip">HTML/CSS/JS</span><span class="chip">IA & Chatbots</span><span class="chip">Automação</span><span class="chip">PHP/MySQL</span><span class="chip">Node.js</span><span class="chip">Python</span>
       </div>
@@ -416,11 +461,43 @@
   </div>
 </div></section>
 
+<!-- ============================================================
+     DEPOIMENTOS — PRONTO, PORÉM OCULTO.
+     PARA ATIVAR: remova o style="display:none" da linha <section> abaixo
+     e troque os textos/nomes pelos depoimentos REAIS dos clientes.
+     (peça 2-3 frases via WhatsApp pra CASCOB, Gabriely, Hospital, etc.)
+     ============================================================ -->
+<section id="depoimentos" style="display:none"><div class="wrap">
+  <div class="sec-head">
+    <span class="tag">prova social</span>
+    <h2>O que dizem os clientes</h2>
+    <p>Resultado de gente real, no ar e dando retorno.</p>
+  </div>
+  <div class="grid-depo">
+
+    <div class="depo">
+      <p class="quote">Site no ar em poucos dias e o primeiro contato pelo WhatsApp veio já na primeira semana. Direto e sem enrolação.</p>
+      <div class="who"><span class="av" aria-hidden="true">C</span><div><b>Nome do Cliente</b><span>CASCOB · Recuperação de créditos</span></div></div>
+    </div>
+
+    <div class="depo">
+      <p class="quote">Profissional, atencioso e entendeu exatamente a identidade que eu queria passar. Recomendo.</p>
+      <div class="who"><span class="av" aria-hidden="true">G</span><div><b>Gabriely Nunes</b><span>Advocacia de família</span></div></div>
+    </div>
+
+    <div class="depo">
+      <p class="quote">Entregou um sistema sob medida que a equipe usa todo dia. Suporte rápido sempre que precisamos.</p>
+      <div class="who"><span class="av" aria-hidden="true">H</span><div><b>Nome do Responsável</b><span>Hospital Nereu Ramos</span></div></div>
+    </div>
+
+  </div>
+</div></section>
+
 <section id="contato"><div class="wrap">
   <div class="cta">
     <span class="tag">vamos conversar</span>
     <h2>Tem um projeto em mente?</h2>
-    <p>Conta pra gente o que você precisa. Respondemos rápido e a primeira conversa é sem compromisso.</p>
+    <p>Me conta o que você precisa. Respondo rápido e a primeira conversa é sem compromisso.</p>
     <div class="cta-btns">
       <a class="btn btn-primary" href="https://wa.me/5548998006470" target="_blank">💬 WhatsApp</a>
       <a class="btn btn-ghost" href="mailto:jfntavares91@gmail.com">✉️ E-mail</a>
