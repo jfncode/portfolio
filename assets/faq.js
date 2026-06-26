@@ -22,7 +22,7 @@ window.JFN_FAQ = {
 
     { id:'precos', tags:['preco','precos','custa','custo','valor','quanto','investimento','orcamento','plano','planos'],
       pergunta:'Quanto custa um site',
-      resposta:'💰 Planos: <b>Essencial R$ 590</b> (one-page) · <b>Profissional R$ 1.290</b> · <b>Premium</b> sob orçamento. Todos com manutenção mensal.<br>Fechando agora eu agilizo — quer montar o seu no WhatsApp?', wa:true },
+      resposta:'💰 Trabalho com 3 planos: <b>Essencial</b> (one-page) · <b>Profissional</b> (site completo + Google) · <b>Premium</b> (sistemas, IA e automação). O valor é <b>sob consulta</b> — cada projeto é montado sob medida.<br>Me chama no WhatsApp que eu te passo um orçamento na hora!', wa:true },
 
     { id:'prazo', tags:['prazo','tempo','demora','quando','pronto','entrega','rapido','dias'],
       pergunta:'Prazo de entrega',
@@ -54,7 +54,7 @@ window.JFN_FAQ = {
 
     { id:'manutencao', tags:['manutencao','mensal','mensalidade','suporte','atualizacao','manter'],
       pergunta:'Tem manutenção',
-      resposta:'🔧 Tem sim — manutenção mensal (R$ 60–90) mantém seu site no ar, seguro e atualizado. É o que garante que seu investimento <b>nunca fica parado</b>.', wa:true },
+      resposta:'🔧 Tem sim — a manutenção mensal mantém seu site no ar, seguro e atualizado. O valor é <b>sob consulta</b>, combinado conforme o projeto. É o que garante que seu site <b>nunca fica parado</b>.', wa:true },
 
     { id:'dominio', tags:['dominio','registro','.com','.com.br','endereco','url','nome do site'],
       pergunta:'Tem domínio incluso',
