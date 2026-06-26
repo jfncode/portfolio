@@ -1,9 +1,0 @@
-feat: remove valores fixos dos planos, tudo sob consulta via WhatsApp
-
-- Planos Essencial/Profissional/Premium agora "Sob consulta"
-- Manutencao mensal "a combinar" (sem valores fixos)
-- FAQ do chatbot atualizado (precos e manutencao sob consulta)
-- priceRange do JSON-LD ajustado
-- CTAs encaminham para o WhatsApp
-
-Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
