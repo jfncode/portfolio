@@ -22,11 +22,11 @@ window.JFN_FAQ = {
 
     { id:'precos', tags:['preco','precos','custa','custo','valor','quanto','investimento','orcamento','plano','planos'],
       pergunta:'Quanto custa um site',
-      resposta:'💰 Trabalho com 3 planos: <b>Essencial</b> (one-page) · <b>Profissional</b> (site completo + Google) · <b>Premium</b> (sistemas, IA e automação). O valor é <b>sob consulta</b> — cada projeto é montado sob medida.<br>Me chama no WhatsApp que eu te passo um orçamento na hora!', wa:true },
+      resposta:'💰 Preço claro, sem susto: <b>Essencial</b> (one-page) a partir de <b>R$ 590</b> · <b>Profissional</b> (site completo + Google) a partir de <b>R$ 1.290</b> · <b>Premium</b> (sistemas, IA e automação) sob medida.<br>Me chama no WhatsApp que em <b>até 24h</b> você recebe a proposta fechada do seu projeto!', wa:true },
 
     { id:'prazo', tags:['prazo','tempo','demora','quando','pronto','entrega','rapido','dias'],
       pergunta:'Prazo de entrega',
-      resposta:'⚡ Um one-page fica no ar em <b>até 7 dias</b>. Quanto antes começar, antes seu negócio aparece e vende. Bora dar o primeiro passo hoje?', wa:true },
+      resposta:'⚡ O processo é direto: proposta fechada em <b>até 24h</b> e um one-page no ar em <b>até 7 dias</b>. Quanto antes começar, antes seu negócio aparece e vende. Bora dar o primeiro passo hoje?', wa:true },
 
     { id:'chatbot', tags:['chatbot','chat','bot','assistente','atendimento','robo de atendimento'],
       pergunta:'Quero um chatbot desses',

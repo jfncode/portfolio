@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>jfncode — Sites, sistemas e automação com IA</title>
-<meta name="description" content="Desenvolvimento de sites, sistemas internos, chatbots e automação com IA para o seu negócio.">
+<title>jfncode — Sites e sistemas com IA | No ar em 7 dias · Florianópolis</title>
+<meta name="description" content="Seu site no ar em até 7 dias, a partir de R$ 590. Sites, landing pages, sistemas internos, chatbots e automação com IA — Florianópolis/SC, atendimento a todo o Brasil pelo WhatsApp.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<meta name="theme-color" content="#0a0e14">
+<meta name="theme-color" content="#F4F6F3">
 <link rel="canonical" href="https://jfncode.github.io/portfolio/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="jfncode">
 <meta property="og:url" content="https://jfncode.github.io/portfolio/">
-<meta property="og:title" content="jfncode — Sites, sistemas e automação com IA">
-<meta property="og:description" content="Do site institucional ao sistema interno, chatbot e robôs que trabalham por você 24/7.">
+<meta property="og:title" content="jfncode — Seu site no ar em 7 dias, sem agência">
+<meta property="og:description" content="Sites a partir de R$ 590, sistemas, chatbots e automação com IA. Proposta fechada em 24h — você fala direto com quem constrói.">
 <meta property="og:image" content="https://jfncode.github.io/portfolio/assets/og-card.jpg">
 <meta property="og:image:secure_url" content="https://jfncode.github.io/portfolio/assets/og-card.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -24,48 +24,73 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="jfncode — Sites, sistemas e automação com IA">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="jfncode — Sites, sistemas e automação com IA">
-<meta name="twitter:description" content="Do site institucional ao sistema interno, chatbot e robôs que trabalham por você 24/7.">
+<meta name="twitter:title" content="jfncode — Seu site no ar em 7 dias, sem agência">
+<meta name="twitter:description" content="Sites a partir de R$ 590, sistemas, chatbots e automação com IA. Proposta fechada em 24h.">
 <meta name="twitter:image" content="https://jfncode.github.io/portfolio/assets/og-card.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
+  /* ============ tokens — "papel técnico + janelas de terminal" ============ */
   :root{
-    --bg:#0a0e14; --bg2:#0f141d; --card:#121925; --line:#1e2a3a;
-    --txt:#e6edf3; --muted:#8b98a9; --accent:#22d3a5; --accent2:#19b8e8;
-    --header-bg:rgba(10,14,20,.8); --veil:rgba(10,14,20,.80);
-    --mono:'JetBrains Mono',ui-monospace,'SF Mono',Consolas,monospace;
-    --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --bg:#F4F6F3; --bg2:#EBEFE9; --card:#FDFEFC; --line:#DCE3DC;
+    --txt:#10201B; --muted:#5A6B62;
+    --accent:#0B8A69;            /* verde da marca calibrado pra fundo claro (AA) */
+    --brand:#22d3a5;             /* verde vivo oficial — só em botões/selos */
+    --brand-ink:#04140E;         /* texto sobre o verde vivo */
+    --amber:#E8A13D; --amber-ink:#241703;   /* acento raro: badge, cursor */
+    --grid-minor:rgba(16,32,27,.05); --grid-major:rgba(16,32,27,.09);
+    --header-bg:rgba(244,246,243,.88);
+    --shadow:0 14px 44px rgba(16,32,27,.10);
+    /* janelas de terminal — sempre acesas, em qualquer tema */
+    --term-bg:#0C1310; --term-bar:#090F0C; --term-line:#1C2A24;
+    --term-txt:#C9DAD2; --term-green:#2BE4B0; --term-muted:#6B8177;
+    --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Consolas,monospace;
+    --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    --disp:'Sora',var(--sans);
   }
-  :root[data-theme="light"]{
-    --bg:#f6f8fb; --bg2:#eceff4; --card:#ffffff; --line:#dde4ec;
-    --txt:#0f1722; --muted:#586273; --accent:#0fa37f; --accent2:#0e8fc4;
-    --header-bg:rgba(255,255,255,.85); --veil:rgba(246,248,251,.78);
+  :root[data-theme="dark"]{
+    --bg:#0A0F0D; --bg2:#0D1411; --card:#111915; --line:#213028;
+    --txt:#E6F0EA; --muted:#93A69C;
+    --accent:#2BE4B0;
+    --grid-minor:rgba(43,228,176,.035); --grid-major:rgba(43,228,176,.06);
+    --header-bg:rgba(10,15,13,.88);
+    --shadow:0 14px 44px rgba(0,0,0,.45);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;overflow-x:hidden}
-  body{background-color:var(--bg);
-    background-image:linear-gradient(var(--veil),var(--veil)),url('assets/bg-neural-dark.jpg');
-    background-size:auto,480px;background-repeat:repeat;background-position:center top;
-    color:var(--txt);font-family:var(--sans);line-height:1.6;overflow-x:hidden;transition:background-color .25s,color .25s}
-  :root[data-theme="light"] body{background-image:linear-gradient(var(--veil),var(--veil)),url('assets/bg-neural-light.jpg')}
+  body{
+    background-color:var(--bg);
+    background-image:
+      linear-gradient(var(--grid-major) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid-major) 1px,transparent 1px),
+      linear-gradient(var(--grid-minor) 1px,transparent 1px),
+      linear-gradient(90deg,var(--grid-minor) 1px,transparent 1px);
+    background-size:160px 160px,160px 160px,32px 32px,32px 32px;
+    color:var(--txt);font-family:var(--sans);line-height:1.65;overflow-x:hidden;
+    transition:background-color .25s,color .25s;
+  }
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
   .accent{color:var(--accent)}
   .mono{font-family:var(--mono)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 
-  /* nav */
+  /* ============ nav ============ */
   header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .logo{font-family:var(--mono);font-weight:700;font-size:1.15rem}
+  .logo{font-family:var(--mono);font-weight:600;font-size:1.12rem}
   .logo b{color:var(--accent)}
-  .nav-links{display:flex;gap:28px;font-size:.92rem;color:var(--muted)}
+  .nav-links{display:flex;gap:26px;font-size:.92rem;color:var(--muted)}
   .nav-links a:hover{color:var(--txt)}
-  .nav-right{display:flex;align-items:center;gap:14px}
-  .theme-toggle{font-family:var(--mono);font-weight:700;font-size:.95rem;color:var(--accent);background:transparent;
+  .nav-right{display:flex;align-items:center;gap:12px}
+  .theme-toggle{font-family:var(--mono);font-weight:600;font-size:.95rem;color:var(--accent);background:transparent;
     border:1px solid var(--line);border-radius:8px;padding:6px 11px;cursor:pointer;line-height:1;transition:.2s}
-  .theme-toggle:hover{border-color:var(--accent);background:rgba(34,211,165,.10)}
+  .theme-toggle:hover{border-color:var(--accent)}
   .theme-toggle .cur{animation:blink 1.1s steps(1) infinite}
   @keyframes blink{50%{opacity:0}}
-  /* menu hamburguer (mobile) */
+  .nav-cta{font-family:var(--mono);font-size:.85rem;font-weight:600;padding:8px 16px;border:1px solid var(--accent);border-radius:8px;color:var(--accent);transition:.2s}
+  .nav-cta:hover{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
   .nav-burger{display:none;background:transparent;border:1px solid var(--line);border-radius:8px;
     width:40px;height:34px;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:4px;padding:0}
   .nav-burger span{width:18px;height:2px;background:var(--txt);border-radius:2px;transition:.25s}
@@ -77,153 +102,216 @@
     flex-direction:column;padding:10px 24px 18px}
   .mobile-menu.open{display:flex}
   .mobile-menu a{padding:13px 2px;color:var(--txt);font-size:1rem;border-bottom:1px solid var(--line)}
-  .mobile-menu a.mm-cta{margin-top:12px;background:var(--accent);color:#04140e;text-align:center;
+  .mobile-menu a.mm-cta{margin-top:12px;background:var(--brand);color:var(--brand-ink);text-align:center;
     border-radius:10px;padding:13px;font-weight:600;border-bottom:none}
-  @media(max-width:760px){ .nav-burger{display:flex} .nav-right .nav-cta{display:none} }
-  .nav-cta{font-family:var(--mono);font-size:.85rem;padding:8px 16px;border:1px solid var(--accent);border-radius:8px;color:var(--accent)}
-  .nav-cta:hover{background:var(--accent);color:#04140e}
-  @media(max-width:760px){.nav-links{display:none}}
+  @media(max-width:900px){ .nav-burger{display:flex} .nav-links{display:none} .nav-right .nav-cta{display:none} }
 
-  /* hero */
-  .hero{position:relative;padding:110px 0 90px;text-align:left;overflow:hidden}
-  .hero::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:780px;height:480px;
-    background:radial-gradient(ellipse at center,rgba(34,211,165,.13),transparent 70%);pointer-events:none}
-  .tag{font-family:var(--mono);font-size:.82rem;color:var(--accent);letter-spacing:.5px;margin-bottom:20px;display:inline-block}
-  .tag::before{content:"// "}
-  h1{font-size:clamp(2.1rem,5.5vw,3.6rem);line-height:1.1;font-weight:800;letter-spacing:-1px;max-width:840px}
-  .hero p{color:var(--muted);font-size:1.15rem;max-width:600px;margin-top:22px}
-  .hero-btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
-  .btn{font-weight:600;padding:14px 26px;border-radius:10px;font-size:.98rem;transition:.2s;display:inline-flex;align-items:center;gap:9px}
-  .btn-primary{background:var(--accent);color:#04140e}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(34,211,165,.3)}
-  .btn-ghost{border:1px solid var(--line);color:var(--txt)}
+  /* ============ botões ============ */
+  .btn{font-weight:600;padding:14px 24px;border-radius:10px;font-size:.97rem;transition:.2s;display:inline-flex;align-items:center;gap:10px}
+  .btn svg{flex:0 0 auto}
+  .btn-primary{background:var(--brand);color:var(--brand-ink)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(34,211,165,.35)}
+  .btn-ghost{border:1px solid var(--line);color:var(--txt);background:var(--card)}
   .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
-  .stats{display:flex;gap:40px;margin-top:56px;flex-wrap:wrap}
-  .stat b{font-family:var(--mono);font-size:1.9rem;color:var(--accent);display:block}
-  .stat span{color:var(--muted);font-size:.88rem}
 
-  /* sections */
-  section{padding:80px 0}
-  .sec-head{margin-bottom:48px}
-  .sec-head .tag{margin-bottom:10px}
-  .sec-head h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800;letter-spacing:-.5px}
+  /* ============ hero ============ */
+  .hero{position:relative;padding:88px 0 34px}
+  .hero .wrap{display:grid;grid-template-columns:1.04fr .96fr;gap:56px;align-items:center}
+  .tag{font-family:var(--mono);font-size:.82rem;font-weight:600;color:var(--accent);letter-spacing:.4px;margin-bottom:18px;display:inline-block}
+  .tag::before{content:"// "}
+  h1{font-family:var(--disp);font-size:clamp(2.05rem,4.5vw,3.05rem);line-height:1.12;font-weight:800;letter-spacing:-.02em}
+  .hero p{color:var(--muted);font-size:1.12rem;max-width:540px;margin-top:20px}
+  .hero-btns{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+  .stats{display:flex;gap:44px;margin-top:46px;flex-wrap:wrap}
+  .stat b{font-family:var(--mono);font-size:1.65rem;font-weight:600;color:var(--accent);display:block;letter-spacing:-.5px}
+  .stat span{color:var(--muted);font-size:.86rem}
+
+  /* ============ janela de terminal (leitmotiv) ============ */
+  .term{background:var(--term-bg);border:1px solid var(--term-line);border-radius:12px;overflow:hidden;
+    font-family:var(--mono);box-shadow:var(--shadow)}
+  .term-bar{height:34px;display:flex;align-items:center;gap:7px;padding:0 13px;background:var(--term-bar);border-bottom:1px solid var(--term-line)}
+  .term-bar .dot{width:11px;height:11px;border-radius:50%}
+  .term-bar .ttl{margin-left:8px;color:var(--term-muted);font-size:.74rem}
+  .term-body{padding:18px 20px;color:var(--term-txt);font-size:.83rem;line-height:2.05}
+  .term .tp{color:var(--term-muted)}
+  .term .tc{color:var(--term-txt);font-weight:600}
+  .term .tok{color:var(--term-green)}
+  .term .tline{display:flex;gap:10px;align-items:baseline;white-space:nowrap}
+  .term .tfill{flex:1;border-bottom:1px dotted var(--term-muted);opacity:.35;transform:translateY(-4px);min-width:12px}
+  .term .tv{color:var(--term-green);font-weight:600}
+  .term .tarrow{color:var(--term-muted)}
+  .term .tcur{display:inline-block;width:9px;height:17px;background:var(--amber);vertical-align:-3px;margin-left:2px;animation:blink 1s steps(1) infinite}
+  .term .pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--term-green);margin-right:8px;animation:pulse 1.8s ease-in-out infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  .hero-term{min-height:318px}
+  .hero-term .term-body{min-height:284px}
+
+  /* ============ trust strip ============ */
+  .trust{padding:26px 0 8px;border-top:0}
+  .trust .lbl{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-bottom:12px}
+  .trust .lbl::before{content:"// "}
+  .trust-names{display:flex;flex-wrap:wrap;gap:10px 26px;font-family:var(--mono);font-size:.8rem;font-weight:600;
+    letter-spacing:.8px;color:var(--muted);text-transform:uppercase}
+
+  /* ============ sections ============ */
+  section{padding:78px 0}
+  .sec-head{margin-bottom:44px}
+  .sec-head .tag{margin-bottom:8px}
+  .sec-head h2{font-family:var(--disp);font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:700;letter-spacing:-.02em}
   .sec-head p{color:var(--muted);margin-top:10px;max-width:560px}
 
-  /* services */
+  /* ============ serviços ============ */
   .grid-serv{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
   .serv{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.2s}
-  .serv:hover{border-color:var(--accent);transform:translateY(-4px)}
-  .serv .ic{font-size:1.6rem;margin-bottom:12px}
-  .serv h3{font-size:1.02rem;margin-bottom:8px}
+  .serv:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:var(--shadow)}
+  .serv .ic{width:38px;height:38px;border-radius:10px;background:var(--bg2);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;color:var(--accent);margin-bottom:14px}
+  .serv h3{font-family:var(--disp);font-size:1rem;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
   .serv p{color:var(--muted);font-size:.86rem}
   @media(max-width:900px){.grid-serv{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:520px){.grid-serv{grid-template-columns:1fr}}
 
-  /* portfolio */
+  /* ============ projetos ============ */
   .grid-proj{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:24px}
   .proj{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s;display:flex;flex-direction:column;position:relative}
-  .seal{position:absolute;top:11px;right:11px;z-index:3;font-family:var(--mono);font-size:.64rem;letter-spacing:.4px;text-transform:uppercase;padding:4px 9px;border-radius:20px;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,.3)}
-  .seal.cli{background:var(--accent);color:#04140e}
-  .seal.own{background:var(--accent2);color:#04140e}
-  .seal.demo{background:rgba(139,152,169,.92);color:#0a0e14}
-  .proj:hover{border-color:var(--accent);transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.4)}
+  .seal{position:absolute;top:11px;right:11px;z-index:3;font-family:var(--mono);font-size:.64rem;letter-spacing:.4px;text-transform:uppercase;padding:4px 9px;border-radius:20px;font-weight:600;box-shadow:0 4px 12px rgba(16,32,27,.25)}
+  .seal.cli{background:var(--brand);color:var(--brand-ink)}
+  .seal.own{background:var(--amber);color:var(--amber-ink)}
+  .seal.demo{background:#8fa39a;color:#0e1713}
+  .proj:hover{border-color:var(--accent);transform:translateY(-5px);box-shadow:var(--shadow)}
   .proj .thumb{aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line);background:var(--bg2)}
   .proj .thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:.4s}
   .proj:hover .thumb img{transform:scale(1.04)}
   .proj .body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
-  .proj .cat{font-family:var(--mono);font-size:.72rem;color:var(--accent);letter-spacing:.5px;text-transform:uppercase}
-  .proj h3{font-size:1.18rem}
+  .proj .cat{font-family:var(--mono);font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.5px;text-transform:uppercase}
+  .proj h3{font-family:var(--disp);font-size:1.14rem;font-weight:700;letter-spacing:-.01em}
   .proj p{color:var(--muted);font-size:.9rem;flex:1}
-  .proj .link{font-family:var(--mono);font-size:.84rem;color:var(--accent);margin-top:6px}
+  .proj .res{font-family:var(--mono);font-size:.78rem;color:var(--accent);background:var(--bg2);
+    border:1px solid var(--line);border-radius:8px;padding:7px 11px;margin-top:4px}
+  .proj .res::before{content:"✓ ";font-weight:600}
+  .proj .link{font-family:var(--mono);font-size:.84rem;font-weight:600;color:var(--accent);margin-top:8px}
   .proj .link::after{content:" ↗"}
   .proj.nolink .link{color:var(--muted)}
-  .termcard{aspect-ratio:16/10;background:linear-gradient(135deg,#0d1320,#121b2c);display:flex;flex-direction:column;font-family:var(--mono);font-size:.78rem;border-bottom:1px solid var(--line)}
-  .termbar{height:30px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#0a0f18;border-bottom:1px solid var(--line)}
-  .dot{width:11px;height:11px;border-radius:50%}
-  .termbody{padding:16px 18px;color:#7ee2c4;line-height:1.7}
-  .termbody .c2{color:var(--accent2)} .termbody .gr{color:var(--muted)}
+  .proj .term{border-radius:0;border:none;border-bottom:1px solid var(--term-line);box-shadow:none;aspect-ratio:16/10}
+  .proj .term .term-body{font-size:.78rem;line-height:1.85}
+  .proj-sum{margin-top:34px;font-family:var(--mono);font-size:.82rem;color:var(--muted);text-align:center}
+  .proj-sum b{color:var(--accent);font-weight:600}
 
-  /* planos */
+  /* ============ processo ============ */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;position:relative;transition:.2s}
+  .step:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+  .step .n{font-family:var(--mono);font-size:.78rem;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .step .n::after{content:"";flex:1;border-top:1px dashed var(--line)}
+  .step .when{font-family:var(--mono);font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+  .step h3{font-family:var(--disp);font-size:1.12rem;font-weight:700;margin:6px 0 8px;letter-spacing:-.01em}
+  .step p{color:var(--muted);font-size:.9rem}
+  .steps-cta{text-align:center;margin-top:36px}
+  @media(max-width:820px){.steps{grid-template-columns:1fr}}
+
+  /* ============ planos ============ */
   .grid-plan{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:stretch}
   .plan{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 28px;display:flex;flex-direction:column;transition:.2s;position:relative}
   .plan:hover{border-color:var(--accent);transform:translateY(-4px)}
-  .plan.feat{border-color:var(--accent);box-shadow:0 18px 50px rgba(34,211,165,.12)}
-  .plan .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:.72rem;background:var(--accent);color:#04140e;padding:5px 14px;border-radius:20px;font-weight:700;letter-spacing:.5px;white-space:nowrap}
-  .plan .pname{font-family:var(--mono);font-size:.82rem;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
-  .plan .pfoco{font-size:.85rem;color:var(--txt);margin-bottom:16px;opacity:.85}
-  .plan .price{font-size:2.3rem;font-weight:800;letter-spacing:-1px;line-height:1}
-  .plan .price small{font-size:.95rem;color:var(--muted);font-weight:500}
-  .plan .mo{font-family:var(--mono);font-size:.82rem;color:var(--muted);margin-top:6px}
+  .plan.feat{border-color:var(--accent);box-shadow:var(--shadow)}
+  .plan .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:.72rem;background:var(--amber);color:var(--amber-ink);padding:5px 14px;border-radius:20px;font-weight:600;letter-spacing:.5px;white-space:nowrap}
+  .plan .pname{font-family:var(--mono);font-size:.82rem;font-weight:600;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
+  .plan .pfoco{font-size:.88rem;color:var(--txt);margin-bottom:18px;opacity:.85}
+  .plan .apartir{font-family:var(--mono);font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+  .plan .price{font-family:var(--disp);font-size:2.3rem;font-weight:800;letter-spacing:-.03em;line-height:1.15}
+  .plan .price small{font-size:1.05rem;color:var(--muted);font-weight:600}
+  .plan .mo{font-family:var(--mono);font-size:.8rem;color:var(--muted);margin-top:6px}
   .plan ul{list-style:none;margin:22px 0 26px;display:flex;flex-direction:column;gap:11px;flex:1}
   .plan li{color:var(--muted);font-size:.92rem;padding-left:24px;position:relative}
   .plan li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
   .plan .btn{justify-content:center;width:100%}
+  .plan-note{color:var(--muted);font-size:.86rem;margin:26px auto 0;text-align:center;max-width:680px}
+  .plan-note b{color:var(--txt)}
 
-  /* about */
-  .about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  /* ============ sobre ============ */
+  .about{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
   .about .txt p{color:var(--muted);margin-bottom:16px}
-  .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-  .chip{font-family:var(--mono);font-size:.8rem;background:var(--bg2);border:1px solid var(--line);padding:6px 13px;border-radius:20px;color:var(--accent)}
-  @media(max-width:760px){.about{grid-template-columns:1fr}}
+  .about .txt b{color:var(--txt)}
+  @media(max-width:820px){.about{grid-template-columns:1fr}}
 
-  /* contact */
-  .cta{background:linear-gradient(135deg,var(--bg2),var(--card));border:1px solid var(--line);border-radius:20px;padding:56px 40px;text-align:center}
-  .cta h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;margin-bottom:14px}
-  .cta p{color:var(--muted);max-width:480px;margin:0 auto 30px}
-  .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-
-  /* depoimentos */
+  /* ============ depoimentos ============ */
   .grid-depo{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
   .depo{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column}
   .depo .quote{color:var(--txt);font-size:.96rem;line-height:1.6;margin-bottom:18px;flex:1}
   .depo .who{display:flex;align-items:center;gap:11px}
-  .depo .av{width:40px;height:40px;border-radius:50%;background:var(--bg2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--mono);color:var(--accent);font-weight:700;flex:0 0 40px}
+  .depo .av{width:40px;height:40px;border-radius:50%;background:var(--bg2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--mono);color:var(--accent);font-weight:600;flex:0 0 40px}
   .depo .who b{font-size:.9rem;display:block}
   .depo .who span{color:var(--muted);font-size:.8rem}
 
-  footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--muted);font-size:.86rem}
-  footer .mono{color:var(--accent)}
+  /* ============ contato ============ */
+  .cta{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:56px 40px;text-align:center;box-shadow:var(--shadow)}
+  .cta h2{font-family:var(--disp);font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
+  .cta p{color:var(--muted);max-width:480px;margin:0 auto 30px}
+  .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-  /* ===== jfncode chatbot (terminal, sempre dark) ===== */
+  footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--muted);font-size:.86rem}
+  footer .mono{color:var(--accent)}
+  footer p{margin-top:4px}
+
+  /* ============ jfncode chatbot (terminal, sempre aceso) ============ */
   .jfc-fab{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;align-items:center;gap:11px;
-    background:#0b1019;border:1px solid #22384a;border-radius:12px;padding:10px 15px;cursor:pointer;
-    font-family:var(--mono);box-shadow:0 12px 30px rgba(0,0,0,.45);transition:.2s}
-  .jfc-fab:hover{border-color:#22d3a5;transform:translateY(-2px)}
+    background:var(--term-bg);border:1px solid var(--term-line);border-radius:12px;padding:10px 15px;cursor:pointer;
+    font-family:var(--mono);box-shadow:0 12px 30px rgba(0,0,0,.35);transition:.2s}
+  .jfc-fab:hover{border-color:var(--term-green);transform:translateY(-2px)}
   .jfc-fab.hidden{display:none}
-  .jfc-seal{width:30px;height:30px;border-radius:8px;background:linear-gradient(145deg,#0e1524,#0a0e14);
-    border:1px solid #22384a;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;flex:0 0 30px}
+  .jfc-seal{width:30px;height:30px;border-radius:8px;background:var(--term-bar);
+    border:1px solid var(--term-line);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:15px;flex:0 0 30px}
   .jfc-ftxt{text-align:left;line-height:1.2}
-  .jfc-ftxt b{color:#e6edf3;font-size:13px;display:block}
-  .jfc-ftxt span{color:#5b6b7d;font-size:11px}
-  .jfc-j{color:#22d3a5;font-weight:800}
-  .jfc-gr{color:#5b6b7d} .jfc-pr{color:#19b8e8}
+  .jfc-ftxt b{color:var(--term-txt);font-size:13px;display:block}
+  .jfc-ftxt span{color:var(--term-muted);font-size:11px}
+  .jfc-j{color:var(--term-green);font-weight:600}
+  .jfc-gr{color:var(--term-muted)} .jfc-pr{color:var(--term-green)}
   .jfc-win{position:fixed;right:22px;bottom:22px;z-index:91;width:360px;max-width:calc(100vw - 32px);
-    height:500px;max-height:calc(100vh - 44px);background:#0b1019;border:1px solid #1e2a3a;border-radius:14px;
-    overflow:hidden;display:none;flex-direction:column;font-family:var(--mono);box-shadow:0 24px 60px rgba(0,0,0,.55)}
+    height:500px;max-height:calc(100vh - 44px);background:var(--term-bg);border:1px solid var(--term-line);border-radius:14px;
+    overflow:hidden;display:none;flex-direction:column;font-family:var(--mono);box-shadow:0 24px 60px rgba(0,0,0,.5)}
   .jfc-win.open{display:flex}
-  .jfc-bar{height:38px;background:#0a0f18;border-bottom:1px solid #1e2a3a;display:flex;align-items:center;gap:8px;padding:0 13px;flex:0 0 38px}
+  .jfc-bar{height:38px;background:var(--term-bar);border-bottom:1px solid var(--term-line);display:flex;align-items:center;gap:8px;padding:0 13px;flex:0 0 38px}
   .jfc-dot{width:11px;height:11px;border-radius:50%}
-  .jfc-title{margin-left:9px;color:#5b6b7d;font-size:12px}
-  .jfc-x{margin-left:auto;background:none;border:none;color:#5b6b7d;font-size:14px;cursor:pointer}
-  .jfc-x:hover{color:#e6edf3}
-  .jfc-log{flex:1;overflow-y:auto;padding:14px 14px 8px;font-size:13px;line-height:1.65;color:#cdd7e1}
-  .jfc-line{margin:8px 0 2px} .jfc-cmd{color:#e6edf3}
-  .jfc-bot{color:#cdd7e1;margin:5px 0 9px} .jfc-bot b{color:#22d3a5}
+  .jfc-title{margin-left:9px;color:var(--term-muted);font-size:12px}
+  .jfc-x{margin-left:auto;background:none;border:none;color:var(--term-muted);font-size:14px;cursor:pointer}
+  .jfc-x:hover{color:var(--term-txt)}
+  .jfc-log{flex:1;overflow-y:auto;padding:14px 14px 8px;font-size:13px;line-height:1.65;color:var(--term-txt)}
+  .jfc-line{margin:8px 0 2px} .jfc-cmd{color:var(--term-txt)}
+  .jfc-bot{color:var(--term-txt);margin:5px 0 9px} .jfc-bot b{color:var(--term-green)}
   .jfc-chips{display:flex;flex-direction:column;gap:7px;margin:2px 0 11px;align-items:flex-start}
-  .jfc-chip{font-family:var(--mono);color:#7ee2c4;background:rgba(34,211,165,.07);border:1px solid #1e3a32;
+  .jfc-chip{font-family:var(--mono);color:#8fe9cd;background:rgba(43,228,176,.07);border:1px solid #1e3a32;
     border-radius:7px;padding:7px 11px;font-size:12.5px;cursor:pointer;text-align:left;transition:.15s}
-  .jfc-chip::before{content:"> ";color:#22d3a5}
-  .jfc-chip:hover{background:rgba(34,211,165,.15);border-color:#22d3a5}
-  .jfc-wa{font-family:var(--mono);color:#0a0e14;background:#22d3a5;border-radius:7px;padding:7px 13px;
-    font-size:12.5px;font-weight:700;text-decoration:none}
+  .jfc-chip::before{content:"> ";color:var(--term-green)}
+  .jfc-chip:hover{background:rgba(43,228,176,.15);border-color:var(--term-green)}
+  .jfc-wa{font-family:var(--mono);color:var(--brand-ink);background:var(--brand);border-radius:7px;padding:7px 13px;
+    font-size:12.5px;font-weight:600;text-decoration:none}
   .jfc-wa:hover{filter:brightness(1.08)}
-  .jfc-inp{border-top:1px solid #1e2a3a;padding:10px 13px;display:flex;align-items:center;gap:7px;flex:0 0 auto}
-  .jfc-inp input{flex:1;background:none;border:none;outline:none;color:#e6edf3;font-family:var(--mono);font-size:13px}
-  .jfc-inp input::placeholder{color:#4a5568}
+  .jfc-inp{border-top:1px solid var(--term-line);padding:10px 13px;display:flex;align-items:center;gap:7px;flex:0 0 auto}
+  .jfc-inp input{flex:1;min-width:0;background:none;border:none;outline:none;color:var(--term-txt);font-family:var(--mono);font-size:13px}
+  .jfc-inp input::placeholder{color:var(--term-muted)}
   @media(max-width:480px){
     .jfc-fab .jfc-ftxt{display:none}
     .jfc-fab{right:16px;bottom:16px}
     .jfc-win{right:10px;left:10px;bottom:10px;width:auto;max-width:none;height:78vh;max-height:78vh}
+  }
+
+  /* ============ responsivo hero ============ */
+  @media(max-width:920px){
+    .hero{padding:56px 0 20px}
+    .hero .wrap{grid-template-columns:1fr;gap:40px}
+    .hero-term{min-height:0}
+    .hero-term .term-body{min-height:0}
+    .term-body{font-size:.78rem}
+  }
+  @media(max-width:480px){
+    .stats{gap:26px}
+    .term-body{font-size:.72rem;padding:14px 14px}
+  }
+
+  /* ============ reduced motion ============ */
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+    html{scroll-behavior:auto}
   }
 </style>
 <script type="application/ld+json">
@@ -231,7 +319,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "jfncode",
-  "description": "Desenvolvimento de sites, sistemas internos, chatbots e automação com IA para o seu negócio.",
+  "description": "Sites, landing pages, sistemas internos, chatbots e automação com IA. Seu site no ar em até 7 dias.",
   "url": "https://jfncode.github.io/portfolio/",
   "image": "https://jfncode.github.io/portfolio/assets/og-card.jpg",
   "founder": { "@type": "Person", "name": "Jefferson Tavares" },
@@ -244,7 +332,14 @@
   },
   "telephone": "+5548998006470",
   "email": "jfntavares91@gmail.com",
-  "priceRange": "Sob consulta",
+  "priceRange": "A partir de R$ 590",
+  "makesOffer": [
+    { "@type": "Offer", "name": "Plano Essencial — landing page one-page",
+      "priceSpecification": { "@type": "PriceSpecification", "minPrice": 590, "priceCurrency": "BRL" } },
+    { "@type": "Offer", "name": "Plano Profissional — site completo com SEO",
+      "priceSpecification": { "@type": "PriceSpecification", "minPrice": 1290, "priceCurrency": "BRL" } },
+    { "@type": "Offer", "name": "Plano Premium — sistemas, chatbots e automação sob medida" }
+  ],
   "sameAs": ["https://github.com/jfncode"]
 }
 </script>
@@ -255,13 +350,14 @@
   <div class="nav-links">
     <a href="#servicos">Serviços</a>
     <a href="#projetos">Projetos</a>
+    <a href="#processo">Como funciona</a>
     <a href="#planos">Planos</a>
     <a href="#sobre">Sobre</a>
     <a href="#contato">Contato</a>
   </div>
   <div class="nav-right">
     <button class="theme-toggle" id="themeToggle" type="button" title="Alternar tema claro/escuro" aria-label="Alternar tema">&gt;<span class="cur">_</span></button>
-    <a class="nav-cta" href="https://wa.me/5548998006470" target="_blank">Falar comigo</a>
+    <a class="nav-cta" href="https://wa.me/5548998006470" target="_blank" rel="noopener">Falar comigo</a>
     <button class="nav-burger" id="navBurger" type="button" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   </div>
 </nav></div></header>
@@ -269,26 +365,48 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="#servicos">Serviços</a>
   <a href="#projetos">Projetos</a>
+  <a href="#processo">Como funciona</a>
   <a href="#planos">Planos</a>
   <a href="#sobre">Sobre</a>
   <a href="#contato">Contato</a>
-  <a class="mm-cta" href="https://wa.me/5548998006470" target="_blank">💬 Falar comigo</a>
+  <a class="mm-cta" href="https://wa.me/5548998006470" target="_blank" rel="noopener">Falar comigo</a>
 </div>
 
 <section class="hero"><div class="wrap">
-  <span class="tag">dev · ia · automação</span>
-  <h1>Seu site no ar em <span class="accent">7 dias</span> — sem agência, sem enrolação.</h1>
-  <p>Sou o Jefferson, desenvolvedor independente turbinado por IA. Entrego rápido, cobro menos que agência e você fala direto comigo — do site ao sistema com automação.</p>
-  <div class="hero-btns">
-    <a class="btn btn-primary" href="https://wa.me/5548998006470" target="_blank">💬 Pedir orçamento</a>
-    <a class="btn btn-ghost" href="#projetos">Ver projetos</a>
+  <div>
+    <span class="tag">dev · ia · automação</span>
+    <h1>Seu site no ar em <span class="accent">7 dias</span> — sem agência, sem enrolação.</h1>
+    <p>Sou o Jefferson, desenvolvedor independente em Florianópolis. Entrego rápido, cobro menos que agência e você fala direto com quem constrói — do site ao sistema com automação, pra todo o Brasil.</p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="https://wa.me/5548998006470" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 224.1 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        Pedir orçamento
+      </a>
+      <a class="btn btn-ghost" href="#projetos">Ver projetos</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>R$ 590</b><span>ponto de partida</span></div>
+      <div class="stat"><b>24h</b><span>pra proposta fechada</span></div>
+      <div class="stat"><b>6</b><span>projetos no ar</span></div>
+    </div>
   </div>
-  <div class="stats">
-    <div class="stat"><b>6</b><span>projetos publicados</span></div>
-    <div class="stat"><b>100%</b><span>código próprio</span></div>
-    <div class="stat"><b>IA</b><span>integrada nas soluções</span></div>
+  <div class="term hero-term" aria-hidden="true">
+    <div class="term-bar">
+      <span class="dot" style="background:#ff5f56"></span>
+      <span class="dot" style="background:#ffbd2e"></span>
+      <span class="dot" style="background:#27c93f"></span>
+      <span class="ttl">jfncode — deploy</span>
+    </div>
+    <div class="term-body" id="heroTerm"></div>
   </div>
 </div></section>
+
+<div class="trust"><div class="wrap">
+  <div class="lbl">no ar por aí</div>
+  <div class="trust-names">
+    <span>CASCOB</span><span>Desbloqueio de App</span><span>Hospital Nereu Ramos</span><span>Gabriely Nunes Adv.</span><span>Descentralize</span>
+  </div>
+</div></div>
 
 <section id="servicos"><div class="wrap">
   <div class="sec-head">
@@ -297,11 +415,26 @@
     <p>Soluções sob medida — do visual à engrenagem que roda por trás.</p>
   </div>
   <div class="grid-serv">
-    <div class="serv"><div class="ic" aria-hidden="true">🌐</div><h3>Sites & Landing Pages</h3><p>Páginas rápidas, responsivas e feitas pra converter. Institucional, captação ou one-page.</p></div>
-    <div class="serv"><div class="ic" aria-hidden="true">⚙️</div><h3>Sistemas internos</h3><p>Plataformas sob medida: cadastros, treinamento, certificação, painéis de gestão.</p></div>
-    <div class="serv"><div class="ic" aria-hidden="true">🤖</div><h3>Chatbots & IA</h3><p>Assistentes que respondem clientes e dúvidas — inclusive 100% offline, sem custo de API.</p></div>
-    <div class="serv"><div class="ic" aria-hidden="true">🔁</div><h3>Automação de conteúdo</h3><p>Conteúdo gerado, agendado e publicado com IA no automático — hoje no X (Twitter), outras automações sob consulta. Presença ativa 24/7 sem postar à mão.</p></div>
-    <div class="serv"><div class="ic" aria-hidden="true">🔗</div><h3>SEO & Preview de Link</h3><p>Open Graph configurado: quando seu link é compartilhado no WhatsApp e redes, aparece com imagem, título e descrição — não um link sem graça.</p></div>
+    <div class="serv">
+      <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+      <h3>Sites &amp; Landing Pages</h3><p>Páginas rápidas, responsivas e feitas pra converter. Institucional, captação ou one-page.</p>
+    </div>
+    <div class="serv">
+      <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
+      <h3>Sistemas internos</h3><p>Plataformas sob medida: cadastros, treinamento, certificação, painéis de gestão.</p>
+    </div>
+    <div class="serv">
+      <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div>
+      <h3>Chatbots &amp; IA</h3><p>Assistentes que respondem clientes e dúvidas — inclusive 100% offline, sem custo de API.</p>
+    </div>
+    <div class="serv">
+      <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div>
+      <h3>Automação de conteúdo</h3><p>Conteúdo gerado, agendado e publicado com IA no automático — presença ativa 24/7 sem postar à mão.</p>
+    </div>
+    <div class="serv">
+      <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+      <h3>SEO &amp; Preview de Link</h3><p>Seu site aparece no Google e, quando o link é compartilhado, mostra imagem e título — não um link sem graça.</p>
+    </div>
   </div>
 </div></section>
 
@@ -309,74 +442,116 @@
   <div class="sec-head">
     <span class="tag">portfólio</span>
     <h2>Projetos no ar</h2>
-    <p>Trabalhos reais, publicados e funcionando. Clique pra visitar.</p>
+    <p>Trabalhos reais, publicados e funcionando — cada card mostra o que já está rodando. Clique pra visitar.</p>
   </div>
   <div class="grid-proj">
 
-    <a class="proj" href="https://cascob.com.br" target="_blank">
+    <a class="proj" href="https://cascob.com.br" target="_blank" rel="noopener">
       <span class="seal cli">Cliente</span>
-      <div class="thumb"><img src="shots/cascob.jpeg" alt="CASCOB"></div>
+      <div class="thumb"><img src="shots/cascob.webp" width="720" height="461" loading="lazy" decoding="async" alt="Site da CASCOB — recuperação de créditos"></div>
       <div class="body"><span class="cat">Site institucional</span><h3>CASCOB</h3>
       <p>Escritório de recuperação de créditos e defesa em busca e apreensão. Design sóbrio, autoridade e captação por WhatsApp.</p>
+      <span class="res">no ar — captação via WhatsApp ativa</span>
       <span class="link">cascob.com.br</span></div>
     </a>
 
-    <a class="proj" href="https://desbloqueiodeapp.com.br" target="_blank">
+    <a class="proj" href="https://desbloqueiodeapp.com.br" target="_blank" rel="noopener">
       <span class="seal cli">Cliente</span>
-      <div class="thumb"><img src="shots/desbloqueiodeapp.jpeg" alt="Desbloqueio de App"></div>
+      <div class="thumb"><img src="shots/desbloqueiodeapp.webp" width="720" height="461" loading="lazy" decoding="async" alt="Landing page Desbloqueio de App"></div>
       <div class="body"><span class="cat">Landing de captação</span><h3>Desbloqueio de App</h3>
       <p>Página focada em entregadores bloqueados em apps de entrega/transporte. Copy direta e conversão.</p>
+      <span class="res">no ar — funil direto pro WhatsApp</span>
       <span class="link">desbloqueiodeapp.com.br</span></div>
     </a>
 
-    <a class="proj" href="https://jfncode.github.io/landing-nereu-ramos/" target="_blank">
+    <a class="proj" href="https://jfncode.github.io/landing-nereu-ramos/" target="_blank" rel="noopener">
       <span class="seal demo">Demo</span>
-      <div class="thumb"><img src="shots/nereu.jpeg" alt="Hospital Nereu Ramos"></div>
+      <div class="thumb"><img src="shots/nereu.webp" width="720" height="461" loading="lazy" decoding="async" alt="Site do Hospital Nereu Ramos com chatbot"></div>
       <div class="body"><span class="cat">Institucional + IA</span><h3>Hospital Nereu Ramos</h3>
-      <p>Landing institucional com o chatbot "Nereu Responde" — assistente de IA que responde dúvidas do público, 100% offline.</p>
+      <p>Landing institucional com o chatbot "Nereu Responde" — assistente de IA que responde dúvidas do público.</p>
+      <span class="res">chatbot offline 24/7 — R$ 0/mês de API</span>
       <span class="link">ver site</span></div>
     </a>
 
-    <a class="proj" href="https://jfncode.github.io/pops-hnr-beta/demo.html" target="_blank">
-      <span class="seal demo">Demo</span>
-      <div class="thumb"><img src="shots/pops.jpeg" alt="POPs HNR"></div>
+    <a class="proj" href="https://jfncode.github.io/pops-hnr-beta/demo.html" target="_blank" rel="noopener">
+      <span class="seal cli">Cliente</span>
+      <div class="thumb"><img src="shots/pops.webp" width="720" height="450" loading="lazy" decoding="async" alt="Plataforma POPs HNR de treinamento"></div>
       <div class="body"><span class="cat">Plataforma de saúde</span><h3>POPs HNR</h3>
       <p>Sistema interno de treinamento e certificação de equipes de enfermagem: leitura de POPs, provas e painel do gestor.</p>
+      <span class="res">em produção — equipe de enfermagem usando</span>
       <span class="link">ver demo</span></div>
     </a>
 
-    <a class="proj" href="https://jfncode.github.io/site-gabriely-nunes-advocacia/" target="_blank">
+    <a class="proj" href="https://gabrielynunes.adv.br" target="_blank" rel="noopener">
       <span class="seal cli">Cliente</span>
-      <div class="thumb"><img src="shots/gabriely.jpeg" alt="Gabriely Nunes Advocacia"></div>
+      <div class="thumb"><img src="shots/gabriely.webp" width="720" height="450" loading="lazy" decoding="async" alt="Site Gabriely Nunes Advocacia"></div>
       <div class="body"><span class="cat">Advocacia</span><h3>Gabriely Nunes Adv.</h3>
       <p>Landing one-page para advocacia de família e sucessões. Identidade elegante e contato direto.</p>
-      <span class="link">ver site</span></div>
+      <span class="res">domínio próprio — indexado no Google</span>
+      <span class="link">gabrielynunes.adv.br</span></div>
     </a>
 
-    <a class="proj" href="https://descentralize.com.br" target="_blank">
+    <a class="proj" href="https://descentralize.com.br" target="_blank" rel="noopener">
       <span class="seal own">Próprio</span>
-      <div class="thumb"><img src="shots/descentralize.jpeg" alt="Descentralize"></div>
+      <div class="thumb"><img src="shots/descentralize.webp" width="720" height="461" loading="lazy" decoding="async" alt="Portal Descentralize sobre Bitcoin e cripto"></div>
       <div class="body"><span class="cat">Portal de conteúdo</span><h3>Descentralize</h3>
       <p>Blog/portal sobre Bitcoin, DeFi e cripto em português. Projeto próprio de conteúdo e audiência.</p>
+      <span class="res">28 páginas otimizadas pra busca</span>
       <span class="link">descentralize.com.br</span></div>
     </a>
 
     <div class="proj nolink">
       <span class="seal own">Próprio</span>
-      <div class="termcard">
-        <div class="termbar"><span class="dot" style="background:#ff5f56"></span><span class="dot" style="background:#ffbd2e"></span><span class="dot" style="background:#27c93f"></span><span class="gr" style="margin-left:8px;color:var(--muted)">jhefbot — 24/7</span></div>
-        <div class="termbody">
-          <span class="gr">$</span> scheduler <span class="c2">--start</span><br>
-          ✓ gerando conteúdo com IA<br>
-          ✓ publicando no horário<br>
-          <span class="gr">$</span> status: <span class="accent">online</span> ▌
+      <div class="term" aria-hidden="true">
+        <div class="term-bar"><span class="dot" style="background:#ff5f56"></span><span class="dot" style="background:#ffbd2e"></span><span class="dot" style="background:#27c93f"></span><span class="ttl">jhefbot — 24/7</span></div>
+        <div class="term-body">
+          <span class="tp">$</span> <span class="tc">scheduler</span> <span class="tok">--start</span><br>
+          <span class="tok">✓</span> gerando conteúdo com ia<br>
+          <span class="tok">✓</span> publicando no horário<br>
+          <span class="tp">$</span> status: <span class="tok">online</span><span class="tcur"></span>
         </div>
       </div>
       <div class="body"><span class="cat">Automação · IA</span><h3>OpenClaw + JhefBot</h3>
       <p>Sistema próprio de automação: bot no Telegram + agendador que gera e publica conteúdo com IA sozinho, sem intervenção.</p>
+      <span class="res">publicando sozinho, todo dia</span>
       <span class="link">projeto interno</span></div>
     </div>
 
+  </div>
+  <p class="proj-sum">// soma até agora: <b>6 projetos no ar</b> · <b>sistema em produção em hospital</b> · <b>chatbots com R$ 0/mês de API</b></p>
+</div></section>
+
+<section id="processo"><div class="wrap">
+  <div class="sec-head">
+    <span class="tag">como funciona</span>
+    <h2>Do primeiro oi ao site no ar</h2>
+    <p>Processo direto, sem reunião infinita. Você sabe o que acontece em cada etapa — e quando.</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="n">01</div>
+      <span class="when">hoje</span>
+      <h3>Me chama no WhatsApp</h3>
+      <p>Você conta o que precisa, do seu jeito. Sem formulário, sem call marcada — eu já respondo com as perguntas certas.</p>
+    </div>
+    <div class="step">
+      <div class="n">02</div>
+      <span class="when">em até 24h</span>
+      <h3>Proposta fechada</h3>
+      <p>Escopo, valor e prazo por escrito. Você sabe exatamente o que vai receber, quanto custa e quando fica pronto.</p>
+    </div>
+    <div class="step">
+      <div class="n">03</div>
+      <span class="when">em até 7 dias</span>
+      <h3>Site no ar</h3>
+      <p>Você acompanha, pede ajustes e recebe tudo publicado: domínio, Google e WhatsApp funcionando desde o primeiro dia.</p>
+    </div>
+  </div>
+  <div class="steps-cta">
+    <a class="btn btn-primary" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Quero%20come%C3%A7ar%20meu%20projeto." target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 224.1 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+      Começar agora
+    </a>
   </div>
 </div></section>
 
@@ -384,31 +559,33 @@
   <div class="sec-head">
     <span class="tag">investimento</span>
     <h2>Planos</h2>
-    <p>Escolha o ponto de partida. Tudo responsivo, no ar em poucos dias e com manutenção mensal pra seu site nunca ficar parado.</p>
+    <p>Preço claro pra começar sem susto. Tudo responsivo, no ar em poucos dias e com manutenção mensal pra seu site nunca ficar parado.</p>
   </div>
   <div class="grid-plan">
 
     <div class="plan">
       <div class="pname">Essencial</div>
-      <div class="pfoco">🌐 Site &amp; Landing Page</div>
-      <div class="price">Sob <small>consulta</small></div>
+      <div class="pfoco">Landing page que apresenta e vende</div>
+      <span class="apartir">a partir de</span>
+      <div class="price">R$ 590</div>
       <div class="mo">+ manutenção mensal a combinar</div>
       <ul>
         <li>Site one-page (várias seções)</li>
         <li>100% responsivo (celular + PC)</li>
         <li>Botão de WhatsApp integrado</li>
-        <li>🔗 Preview de Link (Open Graph)</li>
+        <li>Preview de Link (Open Graph)</li>
         <li>Domínio .com.br configurado</li>
         <li>2 rodadas de ajustes · no ar em 7 dias</li>
       </ul>
-      <a class="btn btn-ghost" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20Essencial." target="_blank">💬 Pedir orçamento</a>
+      <a class="btn btn-ghost" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20Essencial." target="_blank" rel="noopener">Pedir orçamento</a>
     </div>
 
     <div class="plan feat">
       <div class="badge">MAIS PEDIDO</div>
       <div class="pname">Profissional</div>
-      <div class="pfoco">🌐 Site completo + 🔗 presença no Google</div>
-      <div class="price">Sob <small>consulta</small></div>
+      <div class="pfoco">Site completo + presença no Google</div>
+      <span class="apartir">a partir de</span>
+      <div class="price">R$ 1.290</div>
       <div class="mo">+ manutenção mensal a combinar</div>
       <ul>
         <li>Tudo do Essencial</li>
@@ -418,28 +595,29 @@
         <li>SEO otimizado (aparecer no Google)</li>
         <li>3 rodadas de ajustes</li>
       </ul>
-      <a class="btn btn-primary" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20Profissional." target="_blank">💬 Pedir orçamento</a>
+      <a class="btn btn-primary" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20Profissional." target="_blank" rel="noopener">Pedir orçamento</a>
     </div>
 
     <div class="plan">
       <div class="pname">Premium</div>
-      <div class="pfoco">⚙️ Sistemas · 🤖 Chatbots &amp; IA · 🔁 Automação</div>
-      <div class="price">Sob <small>consulta</small></div>
-      <div class="mo">+ manutenção mensal a combinar</div>
+      <div class="pfoco">Sistemas · Chatbots &amp; IA · Automação</div>
+      <span class="apartir">projeto</span>
+      <div class="price">Sob medida</div>
+      <div class="mo">orçamento fechado em até 24h</div>
       <ul>
         <li>Tudo do Profissional</li>
-        <li>⚙️ Sistema interno sob medida (cadastros, painéis)</li>
-        <li>🤖 Chatbot / IA — inclusive 100% offline</li>
-        <li>🔁 Automação 24/7 (publica, monitora, executa)</li>
+        <li>Sistema interno sob medida (cadastros, painéis)</li>
+        <li>Chatbot / IA — inclusive 100% offline</li>
+        <li>Automação 24/7 (publica, monitora, executa)</li>
         <li>Blog ou catálogo dinâmico</li>
         <li>Suporte prioritário</li>
       </ul>
-      <a class="btn btn-ghost" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20um%20projeto%20Premium." target="_blank">Falar comigo</a>
+      <a class="btn btn-ghost" href="https://wa.me/5548998006470?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20um%20projeto%20Premium." target="_blank" rel="noopener">Falar comigo</a>
     </div>
 
   </div>
-  <p style="color:var(--muted);font-size:.86rem;margin-top:24px;text-align:center;max-width:680px;margin-left:auto;margin-right:auto">
-    💡 A <b style="color:var(--txt)">manutenção mensal</b> mantém seu site no ar e cuidado: hospedagem, domínio, atualizações de segurança, backup e pequenos ajustes de conteúdo/texto sempre que precisar. Você nunca fica com um site parado ou desatualizado.
+  <p class="plan-note">
+    A <b>manutenção mensal</b> mantém seu site no ar e cuidado: hospedagem, domínio, atualizações de segurança, backup e pequenos ajustes de conteúdo sempre que precisar. Você nunca fica com um site parado ou desatualizado.
   </p>
 </div></section>
 
@@ -447,16 +625,22 @@
   <div class="about">
     <div class="txt">
       <span class="tag">sobre</span>
-      <h2 style="font-size:2rem;font-weight:800;margin:10px 0 18px">Quem faz</h2>
+      <h2 style="font-family:var(--disp);font-size:2rem;font-weight:800;letter-spacing:-.02em;margin:10px 0 18px">Quem faz</h2>
       <p>Sou o <b>Jefferson</b>, o desenvolvedor por trás da <b><span class="mono accent">jfncode</span></b>. Trabalho de forma independente, turbinado por IA, pra entregar coisas que ficam <b>no ar e dão resultado</b>: sites, sistemas internos, chatbots e automação.</p>
       <p>Cuido do começo ao fim — design, código e a engrenagem por trás — sem templates engessados e sem equipe fantasma: você fala direto com quem constrói. Cada projeto aqui está publicado e funcionando.</p>
-      <div class="skills">
-        <span class="chip">HTML/CSS/JS</span><span class="chip">IA & Chatbots</span><span class="chip">Automação</span><span class="chip">PHP/MySQL</span><span class="chip">Node.js</span><span class="chip">Python</span>
-      </div>
     </div>
-    <div class="txt" style="text-align:center">
-      <div style="font-family:var(--mono);font-size:5rem;color:var(--accent);line-height:1">&lt;/&gt;</div>
-      <p style="margin-top:10px">"Código que resolve problema de gente real."</p>
+    <div class="term" aria-hidden="true">
+      <div class="term-bar"><span class="dot" style="background:#ff5f56"></span><span class="dot" style="background:#ffbd2e"></span><span class="dot" style="background:#27c93f"></span><span class="ttl">jefferson — ~</span></div>
+      <div class="term-body">
+        <span class="tp">~ $</span> <span class="tc">whoami</span><br>
+        jefferson · florianópolis, sc<br>
+        <span class="tp">~ $</span> <span class="tc">cat</span> <span class="tok">stack.txt</span><br>
+        html/css/js · node.js · python<br>
+        php/mysql · ia &amp; automação<br>
+        <span class="tp">~ $</span> <span class="tc">echo</span> <span class="tok">$missao</span><br>
+        "código que resolve problema<br>
+        &nbsp;de gente real."<span class="tcur"></span>
+      </div>
     </div>
   </div>
 </div></section>
@@ -465,7 +649,8 @@
      DEPOIMENTOS — PRONTO, PORÉM OCULTO.
      PARA ATIVAR: remova o style="display:none" da linha <section> abaixo
      e troque os textos/nomes pelos depoimentos REAIS dos clientes.
-     (peça 2-3 frases via WhatsApp pra CASCOB, Gabriely, Hospital, etc.)
+     (peça 2-3 frases via WhatsApp pra CASCOB, Gabriely, Hospital, etc.
+     NÃO publicar com nomes/frases inventados — só depoimento real.)
      ============================================================ -->
 <section id="depoimentos" style="display:none"><div class="wrap">
   <div class="sec-head">
@@ -497,30 +682,45 @@
   <div class="cta">
     <span class="tag">vamos conversar</span>
     <h2>Tem um projeto em mente?</h2>
-    <p>Me conta o que você precisa. Respondo rápido e a primeira conversa é sem compromisso.</p>
+    <p>Me conta o que você precisa. Respondo rápido, a proposta sai em até 24h e a primeira conversa é sem compromisso.</p>
     <div class="cta-btns">
-      <a class="btn btn-primary" href="https://wa.me/5548998006470" target="_blank">💬 WhatsApp</a>
-      <a class="btn btn-ghost" href="mailto:jfntavares91@gmail.com">✉️ E-mail</a>
-      <a class="btn btn-ghost" href="https://github.com/jfncode" target="_blank">⌨️ GitHub</a>
+      <a class="btn btn-primary" href="https://wa.me/5548998006470" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 224.1 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="mailto:jfntavares91@gmail.com">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        E-mail
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/jfncode" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
     </div>
   </div>
 </div></section>
 
 <footer><div class="wrap">
-  <span class="mono">&lt;jfncode/&gt;</span> · © 2026 · Sites, Sistemas, Design &amp; Tráfego — feito com código próprio
+  <span class="mono">&lt;jfncode/&gt;</span> · © 2026 · Sites, Sistemas &amp; Automação
+  <p>Florianópolis/SC — atendimento a todo o Brasil pelo WhatsApp</p>
 </div></footer>
 <script>
   (function(){
+    /* tema: claro é o padrão; 'dark' salvo reativa o modo terminal */
     var root=document.documentElement, KEY='jfn_theme';
-    var saved=localStorage.getItem(KEY);
-    if(saved==='light') root.setAttribute('data-theme','light');
+    var themeColor=document.querySelector('meta[name="theme-color"]');
+    function apply(dark){
+      if(dark) root.setAttribute('data-theme','dark'); else root.removeAttribute('data-theme');
+      if(themeColor) themeColor.setAttribute('content', dark?'#0A0F0D':'#F4F6F3');
+    }
+    apply(localStorage.getItem(KEY)==='dark');
     var btn=document.getElementById('themeToggle');
     if(btn) btn.addEventListener('click',function(){
-      var light=root.getAttribute('data-theme')!=='light';
-      if(light) root.setAttribute('data-theme','light'); else root.removeAttribute('data-theme');
-      localStorage.setItem(KEY, light?'light':'dark');
+      var dark=root.getAttribute('data-theme')!=='dark';
+      apply(dark); localStorage.setItem(KEY, dark?'dark':'light');
     });
-    // menu hamburguer
+
+    /* menu hamburguer */
     var burger=document.getElementById('navBurger'), mm=document.getElementById('mobileMenu');
     if(burger&&mm){
       burger.addEventListener('click',function(){
@@ -529,6 +729,59 @@
       mm.querySelectorAll('a').forEach(function(a){
         a.addEventListener('click',function(){ mm.classList.remove('open'); burger.classList.remove('open'); });
       });
+    }
+
+    /* terminal do hero — o processo "compilando" na frente do visitante */
+    var term=document.getElementById('heroTerm');
+    if(term){
+      var LINES=[
+        {t:'cmd',  c:'jfncode deploy', a:'--seu-negocio'},
+        {t:'out',  l:'briefing no whatsapp', v:'hoje'},
+        {t:'out',  l:'proposta fechada', v:'24h'},
+        {t:'out',  l:'design + código', v:'dias 2–6'},
+        {t:'ok',   l:'site no ar', v:'dia 7'},
+        {t:'ok',   l:'google + whatsapp ativos', v:'dia 7'},
+        {t:'cmd',  c:'status'},
+        {t:'live', l:'online — aceitando projetos'}
+      ];
+      function render(spec,fill){
+        var d=document.createElement('div');
+        if(spec.t==='cmd'){
+          d.innerHTML='<span class="tp">~ $</span> <span class="tc"></span>'+(spec.a?' <span class="tok"></span>':'');
+          d.querySelector('.tc').textContent=fill?spec.c:'';
+          if(spec.a) d.querySelectorAll('.tok')[0].textContent=fill?spec.a:'';
+        }else if(spec.t==='live'){
+          d.innerHTML='<span class="pulse"></span><span class="tv"></span><span class="tcur"></span>';
+          d.querySelector('.tv').textContent=spec.l;
+        }else{
+          d.className='tline';
+          d.innerHTML='<span class="'+(spec.t==='ok'?'tok':'tarrow')+'">'+(spec.t==='ok'?'✓':'→')+'</span><span>'+spec.l+'</span><span class="tfill"></span><span class="tv">'+spec.v+'</span>';
+        }
+        term.appendChild(d);
+        return d;
+      }
+      var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(reduce){
+        LINES.forEach(function(s){render(s,true)});
+      }else{
+        var i=0;
+        (function next(){
+          if(i>=LINES.length) return;
+          var spec=LINES[i++];
+          if(spec.t==='cmd'){
+            var d=render(spec,false), tc=d.querySelector('.tc'), tokEl=spec.a?d.querySelectorAll('.tok')[0]:null;
+            var full=spec.c, extra=spec.a||'', j=0;
+            (function type(){
+              if(j<full.length){ tc.textContent=full.slice(0,++j); setTimeout(type,34); }
+              else if(tokEl&&tokEl.textContent.length<extra.length){ tokEl.textContent=extra.slice(0,tokEl.textContent.length+1); setTimeout(type,34); }
+              else setTimeout(next,320);
+            })();
+          }else{
+            render(spec,true);
+            setTimeout(next, spec.t==='live'?0:300);
+          }
+        })();
+      }
     }
   })();
 </script>

@@ -109,7 +109,7 @@
     opened = !opened;
     win.classList.toggle('open', opened);
     fab.classList.toggle('hidden', opened);
-    if (opened && !log.dataset.started) { log.dataset.started = '1'; greet(true); setTimeout(function () { input.focus(); }, 200); }
+    if (opened && !log.dataset.started) { log.dataset.started = '1'; greet(true); setTimeout(function () { input.focus({ preventScroll: true }); win.scrollLeft = 0; }, 200); }
   }
 
   // FAB
