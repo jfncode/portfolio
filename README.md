@@ -2,7 +2,7 @@
 
 Portfólio de serviços de **Jefferson (jfncode)**: desenvolvimento de sites, sistemas internos, chatbots e automação com IA.
 
-🌐 **No ar:** https://jfncode.github.io/portfolio/
+🌐 **No ar:** https://www.jfncode.com.br/
 
 One-page em HTML/CSS/JS puro, em `index.html`. Design **"papel técnico + janelas de terminal"**: tema claro por padrão (grid de papel milimetrado, tipografia Sora + IBM Plex), com a identidade dev concentrada nas janelas de terminal escuras — hero animado com o processo de entrega, card do JhefBot, `whoami` no Sobre e o chatbot. Toggle `>_` alterna pro modo terminal completo (dark).
 
