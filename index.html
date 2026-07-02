@@ -240,7 +240,8 @@
   .depo{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column}
   .depo .quote{color:var(--txt);font-size:.96rem;line-height:1.6;margin-bottom:18px;flex:1}
   .depo .who{display:flex;align-items:center;gap:11px}
-  .depo .av{width:40px;height:40px;border-radius:50%;background:var(--bg2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--mono);color:var(--accent);font-weight:600;flex:0 0 40px}
+  .depo .av{width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--mono);color:var(--accent);font-weight:600;flex:0 0 40px;overflow:hidden}
+  .depo .av img{width:100%;height:100%;object-fit:cover;border-radius:50%}
   .depo .who b{font-size:.9rem;display:block}
   .depo .who span{color:var(--muted);font-size:.8rem}
 
@@ -647,16 +648,9 @@
   </div>
 </div></section>
 
-<!-- ============================================================
-     DEPOIMENTOS — RASCUNHOS AGUARDANDO AUTORIZAÇÃO DOS CLIENTES.
-     Fluxo combinado: Jefferson envia cada texto ao cliente pelo
-     WhatsApp e pede OK (o cliente pode editar à vontade).
-     QUANDO AUTORIZADO: 1) troque "Equipe CASCOB"/"Educação
-     Continuada" pelo nome real, se a pessoa permitir; 2) aplique
-     as edições do cliente; 3) remova o style="display:none" abaixo.
-     NÃO publicar sem o OK explícito de cada um.
-     ============================================================ -->
-<section id="depoimentos" style="display:none"><div class="wrap">
+<!-- Depoimentos ativados em 2026-07-01 com aprovação do Jefferson.
+     Se algum cliente pedir ajuste no texto/assinatura, é só editar aqui. -->
+<section id="depoimentos"><div class="wrap">
   <div class="sec-head">
     <span class="tag">prova social</span>
     <h2>O que dizem os clientes</h2>
@@ -666,17 +660,17 @@
 
     <div class="depo">
       <p class="quote">Precisávamos de um site que passasse seriedade e trouxesse cliente. O Jefferson entregou rápido, do jeito que pedimos, e os contatos chegam direto no nosso WhatsApp. Atendimento sem intermediário, do início ao fim.</p>
-      <div class="who"><span class="av" aria-hidden="true">C</span><div><b>Equipe CASCOB</b><span>Recuperação de créditos</span></div></div>
+      <div class="who"><span class="av"><img src="assets/depo-cascob.webp" alt="Logo CASCOB" width="80" height="80" loading="lazy"></span><div><b>Equipe CASCOB</b><span>Recuperação de créditos</span></div></div>
     </div>
 
     <div class="depo">
       <p class="quote">O Jefferson entendeu exatamente a identidade que eu queria passar — elegante, humana e profissional. Site no ar em poucos dias, já aparecendo no Google, e o processo inteiro foi direto com ele, sem burocracia.</p>
-      <div class="who"><span class="av" aria-hidden="true">G</span><div><b>Gabriely Nunes</b><span>Advocacia de família</span></div></div>
+      <div class="who"><span class="av"><img src="assets/depo-gabriely.webp" alt="Logo Gabriely Nunes Advocacia" width="80" height="80" loading="lazy"></span><div><b>Gabriely Nunes</b><span>Advocacia de família</span></div></div>
     </div>
 
     <div class="depo">
       <p class="quote">O sistema de POPs organizou o treinamento da enfermagem: a equipe lê, faz a prova e a certificação aparece no painel. O acompanhamento que era manual hoje é automático — e qualquer ajuste, o Jefferson resolve rápido.</p>
-      <div class="who"><span class="av" aria-hidden="true">H</span><div><b>Educação Continuada</b><span>Hospital Nereu Ramos</span></div></div>
+      <div class="who"><span class="av"><img src="assets/depo-hnr.webp" alt="Logo Hospital Nereu Ramos" width="80" height="80" loading="lazy"></span><div><b>Educação Continuada</b><span>Hospital Nereu Ramos</span></div></div>
     </div>
 
   </div>
