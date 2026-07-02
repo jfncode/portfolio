@@ -180,8 +180,9 @@
   .seal.demo{background:#8fa39a;color:#0e1713}
   .proj:hover{border-color:var(--accent);transform:translateY(-5px);box-shadow:var(--shadow)}
   .proj .thumb{aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line);background:var(--bg2)}
-  .proj .thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:.4s}
-  .proj:hover .thumb img{transform:scale(1.04)}
+  /* "site vivo": o print navega o site do cliente no hover (ida 9s) e volta ao topo ao sair (2.2s) */
+  .proj .thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:object-position 2.2s ease}
+  .proj:hover .thumb img,.proj.live .thumb img{object-position:bottom;transition:object-position 9s cubic-bezier(.25,.1,.35,1)}
   .proj .body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
   .proj .cat{font-family:var(--mono);font-size:.72rem;font-weight:600;color:var(--accent);letter-spacing:.5px;text-transform:uppercase}
   .proj h3{font-family:var(--disp);font-size:1.14rem;font-weight:700;letter-spacing:-.01em}
@@ -312,6 +313,7 @@
   @media(prefers-reduced-motion:reduce){
     *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
     html{scroll-behavior:auto}
+    .proj:hover .thumb img,.proj.live .thumb img{object-position:top}
   }
 </style>
 <script type="application/ld+json">
@@ -448,7 +450,7 @@
 
     <a class="proj" href="https://cascob.com.br" target="_blank" rel="noopener">
       <span class="seal cli">Cliente</span>
-      <div class="thumb"><img src="shots/cascob.webp" width="720" height="461" loading="lazy" decoding="async" alt="Site da CASCOB — recuperação de créditos"></div>
+      <div class="thumb"><img src="shots/cascob.webp" width="720" height="2300" loading="lazy" decoding="async" alt="Site da CASCOB — recuperação de créditos"></div>
       <div class="body"><span class="cat">Site institucional</span><h3>CASCOB</h3>
       <p>Escritório de recuperação de créditos e defesa em busca e apreensão. Design sóbrio, autoridade e captação por WhatsApp.</p>
       <span class="res">no ar — captação via WhatsApp ativa</span>
@@ -457,7 +459,7 @@
 
     <a class="proj" href="https://desbloqueiodeapp.com.br" target="_blank" rel="noopener">
       <span class="seal cli">Cliente</span>
-      <div class="thumb"><img src="shots/desbloqueiodeapp.webp" width="720" height="461" loading="lazy" decoding="async" alt="Landing page Desbloqueio de App"></div>
+      <div class="thumb"><img src="shots/desbloqueiodeapp.webp" width="720" height="2300" loading="lazy" decoding="async" alt="Landing page Desbloqueio de App"></div>
       <div class="body"><span class="cat">Landing de captação</span><h3>Desbloqueio de App</h3>
       <p>Página focada em entregadores bloqueados em apps de entrega/transporte. Copy direta e conversão.</p>
       <span class="res">no ar — funil direto pro WhatsApp</span>
@@ -466,7 +468,7 @@
 
     <a class="proj" href="https://jfncode.github.io/landing-nereu-ramos/" target="_blank" rel="noopener">
       <span class="seal demo">Demo</span>
-      <div class="thumb"><img src="shots/nereu.webp" width="720" height="461" loading="lazy" decoding="async" alt="Site do Hospital Nereu Ramos com chatbot"></div>
+      <div class="thumb"><img src="shots/nereu.webp" width="720" height="2300" loading="lazy" decoding="async" alt="Site do Hospital Nereu Ramos com chatbot"></div>
       <div class="body"><span class="cat">Institucional + IA</span><h3>Hospital Nereu Ramos</h3>
       <p>Landing institucional com o chatbot "Nereu Responde" — assistente de IA que responde dúvidas do público.</p>
       <span class="res">chatbot offline 24/7 — R$ 0/mês de API</span>
@@ -475,7 +477,7 @@
 
     <a class="proj" href="https://jfncode.github.io/pops-hnr-beta/demo.html" target="_blank" rel="noopener">
       <span class="seal cli">Cliente</span>
-      <div class="thumb"><img src="shots/pops.webp" width="720" height="450" loading="lazy" decoding="async" alt="Plataforma POPs HNR de treinamento"></div>
+      <div class="thumb"><img src="shots/pops.webp" width="720" height="818" loading="lazy" decoding="async" alt="Plataforma POPs HNR de treinamento"></div>
       <div class="body"><span class="cat">Plataforma de saúde</span><h3>POPs HNR</h3>
       <p>Sistema interno de treinamento e certificação de equipes de enfermagem: leitura de POPs, provas e painel do gestor.</p>
       <span class="res">em produção — equipe de enfermagem usando</span>
@@ -484,7 +486,7 @@
 
     <a class="proj" href="https://gabrielynunes.adv.br" target="_blank" rel="noopener">
       <span class="seal cli">Cliente</span>
-      <div class="thumb"><img src="shots/gabriely.webp" width="720" height="450" loading="lazy" decoding="async" alt="Site Gabriely Nunes Advocacia"></div>
+      <div class="thumb"><img src="shots/gabriely.webp" width="720" height="1362" loading="lazy" decoding="async" alt="Site Gabriely Nunes Advocacia"></div>
       <div class="body"><span class="cat">Advocacia</span><h3>Gabriely Nunes Adv.</h3>
       <p>Landing one-page para advocacia de família e sucessões. Identidade elegante e contato direto.</p>
       <span class="res">domínio próprio — indexado no Google</span>
@@ -493,7 +495,7 @@
 
     <a class="proj" href="https://descentralize.com.br" target="_blank" rel="noopener">
       <span class="seal own">Próprio</span>
-      <div class="thumb"><img src="shots/descentralize.webp" width="720" height="461" loading="lazy" decoding="async" alt="Portal Descentralize sobre Bitcoin e cripto"></div>
+      <div class="thumb"><img src="shots/descentralize.webp" width="720" height="2300" loading="lazy" decoding="async" alt="Portal Descentralize sobre Bitcoin e cripto"></div>
       <div class="body"><span class="cat">Portal de conteúdo</span><h3>Descentralize</h3>
       <p>Blog/portal sobre Bitcoin, DeFi e cripto em português. Projeto próprio de conteúdo e audiência.</p>
       <span class="res">28 páginas otimizadas pra busca</span>
@@ -729,6 +731,15 @@
       mm.querySelectorAll('a').forEach(function(a){
         a.addEventListener('click',function(){ mm.classList.remove('open'); burger.classList.remove('open'); });
       });
+    }
+
+    /* "site vivo" no touch: sem hover, a demo liga quando o card está 60% visível */
+    var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(window.matchMedia('(hover: none)').matches && !reduceMotion && 'IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){ e.target.classList.toggle('live', e.intersectionRatio>=.6); });
+      },{threshold:[0,.6]});
+      document.querySelectorAll('.proj').forEach(function(p){ io.observe(p); });
     }
 
     /* terminal do hero — o processo "compilando" na frente do visitante */
