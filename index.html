@@ -9,7 +9,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<meta name="theme-color" content="#F4F6F3">
+<meta name="theme-color" content="#0A0F0D">
+<script>(function(){try{if(localStorage.getItem('jfn_theme')!=='light')document.documentElement.setAttribute('data-theme','dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}})()</script>
 <link rel="canonical" href="https://www.jfncode.com.br/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
@@ -704,14 +705,14 @@
 </div></footer>
 <script>
   (function(){
-    /* tema: claro é o padrão; 'dark' salvo reativa o modo terminal */
+    /* tema: DARK é o padrão; 'light' salvo ativa o modo claro */
     var root=document.documentElement, KEY='jfn_theme';
     var themeColor=document.querySelector('meta[name="theme-color"]');
     function apply(dark){
       if(dark) root.setAttribute('data-theme','dark'); else root.removeAttribute('data-theme');
       if(themeColor) themeColor.setAttribute('content', dark?'#0A0F0D':'#F4F6F3');
     }
-    apply(localStorage.getItem(KEY)==='dark');
+    apply(localStorage.getItem(KEY)!=='light');
     var btn=document.getElementById('themeToggle');
     if(btn) btn.addEventListener('click',function(){
       var dark=root.getAttribute('data-theme')!=='dark';
